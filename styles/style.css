@@ -1,0 +1,40 @@
+html {
+    --main-color: #363535;
+    --gold-color: #cfa46b;
+    --grey-color: #949494;
+    --grey-dark-color: #5e5e5e;
+    --white-color: #fff;
+    --head-font: 'Early-bird', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
+    --josefin-font: 'Josefin Sans', sans-serif;
+    --pacifico-font: 'Pacifico', sans-serif;
+    --serif-font: 'PT Serif', serif;
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    color: var(--main-color);
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
