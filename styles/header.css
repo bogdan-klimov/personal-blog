@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Early-bird';
+    src: url(./../fonts/early_bird.otf);
+}
+
+.header {
+    margin-top: 55px;
+}
+
+.title {
+    font-family: var(--head-font);
+    font-weight: 200;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: .2em;
+    width: 100%;
+}
+
+.title::after, .title::before {
+    content: '';
+    max-width: 440px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.title::after {
+    margin-left: 35px;
+}
+
+.title::before {
+    margin-right: 35px;
+}
+
+.sub_title {
+    display: block;
+    font-family: var(--main-font);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin: 20px auto;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.nav_list {
+    display: flex;
+    max-width: 620px;
+    width: 100%;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: -30px;
+}
+
+.nav_item {
+    padding: 0 30px;
+}
+
+.nav_item:hover {
+    transform: scale(1.10);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.search_block {
+    cursor: pointer;
+}

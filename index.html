@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500;600&family=PT+Serif&family=Pacifico&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./styles/index.css"> 
+    <link rel="stylesheet" href="./styles/fontello.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header class="main_section">
+    <header class="header" name="top">
         <div class="container">
-            <!-- <h1 class="title">Life Style Blog</h1> -->
+            <h1 class="title">Life Style Blog</h1>
             <span class="sub_title">
                 A theme for all life style and travel bloggers
             </span>
             <nav class="nav">
                 <ul class="nav_list">
                     <li class="nav_item">
-                        <a href="./home.html">home</a>
+                        <a href="./index.html">home</a>
                     </li>
                     <li class="nav_item">
                         <a href="#">categories</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#">blog</a>
+                        <a href="./pages/posts/posts.html">blog</a>
                     </li>
                     <li class="nav_item">
                         <a href="./../../pages/about/about.html">about</a>
@@ -37,14 +38,16 @@
                         <a href="#">contact</a>
                     </li>
                 </ul>
-                <div class="search_block">()</div>
+                <div class="search_block icon-search"></div>
             </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
             <div class="slider">
                 <div class="slider_wrapper">
                     <div class="slider_blur"></div>
                     <div class="slider_blur"></div>
-                    <div class="slider_arrow-left">l</div>
-                    <div class="slider_arrow-right">r</div>
                     <div class="slider_block">
                         <span class="slider_block-head">
                             Travel - Europe
@@ -56,17 +59,10 @@
                             Read more
                         </a>
                     </div>
-                    <ul class="slider_list">
-                        <li class="slider_item slider_item_1"></li>
-                        <li class="slider_item"></li>
-                        <li class="slider_item slider_item_2"></li>
+                    <ul class="slider_list" id="slider_list">
                     </ul>
                 </div>
             </div>
-        </div>
-    </header>
-    <main class="main">
-        <div class="container">
             <ul class="categories_blocks">
                 <li class="categories_block">
                     <div class="categories_hover"></div>
@@ -209,14 +205,122 @@
                     </li>
                 </ul>
                 <div class="side_block">
-                    Side block
+                    <div class="side_item">
+                        <h2 class="side_title">
+                            about
+                        </h2>
+                        <div class="side_about-image"></div>
+                        <p class="side_about-text">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Morbi vitae ultrices augue. 
+                            In hac habitasse platea 
+                            dictumst. Suspendisse finibus 
+                            augue nec mi luctus, ac 
+                            bibendum diam iaculis. 
+                            Maecenas vitae nisl ex.
+                        </p>
+                    </div>
+                    <div class="side_item">
+                        <h2 class="side_title">Social</h2>
+                        <ul class="social_list">
+                            <li class="social_list-item">
+                                <a class="icon-twitter" href="#"></a>
+                            </li>
+                            <li class="social_list-item">
+                                <a class="icon-instagram" href="#"></a>
+                            </li>
+                            <li class="social_list-item">
+                                <a class="icon-linkedin" href="#"></a>
+                            </li>
+                            <li  class="social_list-item">
+                                <a class="icon-facebook" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="side_item">
+                        <h2 class="side_title">Categories</h2>
+                        <ul class="categories_list">
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    travel
+                                    <span class="categories_count">13</span>
+                                </a>
+                            </li>
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    fashion
+                                    <span class="categories_count">9</span>
+                                </a>
+                            </li>
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    lifestyle
+                                    <span class="categories_count">7</span>
+                                </a>
+                            </li>
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    food
+                                    <span class="categories_count">3</span>
+                                </a>
+                            </li>
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    inspiration
+                                    <span class="categories_count">2</span>
+                                </a>
+                            </li>
+                            <li class="categories_list-item">
+                                <a href="#" class="categories_list-link">
+                                    photography
+                                    <span class="categories_count">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="side_item">
+                        <h2 class="side_title">
+                            Quotes
+                        </h2>
+                        <div class="side_quote-icon icon-quote-left"></div>
+                        <p class="side_quote">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Morbi vitae ultrices augue. 
+                            Suspendisse finibus 
+                            augue nec mi luctus, ac 
+                            bibendum diam iaculis.
+                        </p>
+                        <div class="side_quote-icon icon-quote-right"></div>
+                        <ul class="side_quote-list">
+                            <li class="side_quote-item quote_active"></li>
+                            <li class="side_quote-item"></li>
+                            <li class="side_quote-item"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
-
+        <h2 class="gallery_title">
+            Gallery 
+        </h2>
+        <ul class="gallery">
+            <li class="gallery_item"></li>
+            <li class="gallery_item"></li>
+            <li class="gallery_item"></li>
+            <li class="gallery_item"></li>
+            <li class="gallery_item"></li>
+            <li class="gallery_item"></li>
+        </ul>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="copyright">Designed by Stonyart</div>
+        <a href="#top" class="scroll_up">
+            Back to top 
+            <div class="icon-up-big"></div>
+        </a>
     </footer>
+    <script src="./scripts/slider.js"></script>
 </body>
 </html>

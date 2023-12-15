@@ -10,13 +10,14 @@ html {
     --pacifico-font: 'Pacifico', sans-serif;
     --serif-font: 'PT Serif', serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     overflow-x: hidden;
 }
 
-html, body, h1, h2, h3, h4, h5, h6 {
+html, body, h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     margin: 0;
     color: var(--main-color);
