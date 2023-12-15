@@ -15,24 +15,24 @@ let leftImg = arts.length - 1
 for (let i = 0; i < arts.length; i++) {
     const li = document.createElement('li')
     li.className = 'slider_item'
-    li.style.backgroundImage = `url(./../images/slider/${arts[i]}.jpg)`
     slider.append(li)
+    li.style.backgroundImage = `url(./../images/slider/${arts[i]}.jpg)`
 }
 
 const updateSlider = () => {
     count++
     const li = document.createElement('li')
     li.className = 'slider_item'
-    li.style.backgroundImage = `url(./../images/slider/${arts[rightImg]}.jpg)`
     slider.append(li)
+    li.style.backgroundImage = `url(./../images/slider/${arts[rightImg]}.jpg)`
     rightImg++
     if (rightImg >= 3) {rightImg = 0}
     slider.style.left = width * count * -1 + 'px'
 }
 
-let sliderInterval = setInterval(updateSlider, 6400)
+let sliderInterval = setInterval(updateSlider, 5400)
 
 document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') clearInterval(sliderInterval)
-    else sliderInterval = setInterval(updateSlider, 6400)
+    else sliderInterval = setInterval(updateSlider, 5400)
 });
