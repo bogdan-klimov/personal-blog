@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Early-bird';
-    src: url(./../fonts/early_bird.otf);
+    src: url(./../../fonts/early_bird.otf);
 }
 
 .header {

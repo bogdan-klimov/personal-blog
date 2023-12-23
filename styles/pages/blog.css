@@ -1,0 +1,25 @@
+html {
+    scrollbar-gutter: stable;
+}
+
+
+.post_img_1 {
+    background-image: url(./../../images/post_1.jpg);
+}
+
+.post_img_2 {
+    background-image: url(./../../images/post_2.jpg);
+}
+
+.post_img_3 {
+    background-image: url(./../../images/post_3.jpg);
+}
+
+.post_img_4 {
+    background-image: url(./../../images/post_4.jpg);
+}
+
+.load_more {
+    margin: 60px 0;
+    display: block;
+}

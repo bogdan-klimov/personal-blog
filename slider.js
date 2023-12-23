@@ -1,4 +1,6 @@
 const slider = document.getElementById('slider_list')
+const prevButton = document.getElementById('slider_left-arrow')
+const nextButton = document.getElementById('slider_right-arrow')
 
 arts = [
     'mountains', 
@@ -6,33 +8,58 @@ arts = [
     'yellow_beach'
 ]
 
-const width = 1280
-slider.style.left = width * -1 + 'px'
-let count = 1
-let rightImg = 0
-let leftImg = arts.length - 1
+// const width = 1280
+// slider.style.left = width * -1 + 'px'
+// let currElem = 0
 
-for (let i = 0; i < arts.length; i++) {
-    const li = document.createElement('li')
-    li.className = 'slider_item'
-    slider.append(li)
-    li.style.backgroundImage = `url(images/slider/${arts[i]}.jpg)`
-}
+// for (let i = 0; i < arts.length; i++) {
+//     const li = document.createElement('li')
+//     li.className = 'slider_item'
+//     slider.append(li)
+//     li.style.backgroundImage = `url(images/slider/${arts[i]}.jpg)`
+// }
 
-const updateSlider = () => {
-    count++
-    const li = document.createElement('li')
-    li.className = 'slider_item'
-    slider.append(li)
-    li.style.backgroundImage = `url(images/slider/${arts[rightImg]}.jpg)`
-    rightImg++
-    if (rightImg >= 3) {rightImg = 0}
-    slider.style.left = width * count * -1 + 'px'
-}
 
-let sliderInterval = setInterval(updateSlider, 6400)
+// const initSlider = () => {
+//     slider.innerHTML = ''
+//     if (currElem > arts.length-1) currElem = 0
+//     else if (currElem < 0) currElem = arts.length-1
+//     const li = document.createElement('li')
+//     li.className = 'slider_item'
+//     slider.append(li)
+    // li.style.backgroundImage = `url(images/slider/${arts[currElem]}.jpg)`
+    // prevElem()
+    // nextElem()
+// }
 
-document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'hidden') clearInterval(sliderInterval)
-    else sliderInterval = setInterval(updateSlider, 6400)
-});
+// const prevElem = () => {
+//     let nextElem = currElem-1
+//     if (nextElem < 0) nextElem = arts.length - 1
+//     const li = document.createElement('li')
+//     li.className = 'slider_item'
+//     slider.prepend(li)
+//     li.style.backgroundImage = `url(images/slider/${arts[nextElem]}.jpg)`
+// }
+
+// const nextElem = () => {
+//     let prevElem = currElem+1
+//     if (currElem > arts.length-1) prevElem = 0
+//     const li = document.createElement('li')
+//     li.className = 'slider_item'
+//     slider.append(li)
+//     li.style.backgroundImage = `url(images/slider/${arts[prevElem]}.jpg)`
+// }
+
+// initSlider()
+
+
+// prevButton.addEventListener('click', () => {
+//     currElem -= 1
+//     initSlider()
+// })
+
+
+// nextButton.addEventListener('click', () => {
+//     currElem += 1
+//     initSlider()
+// })
