@@ -2,64 +2,77 @@ const slider = document.getElementById('slider_list')
 const prevButton = document.getElementById('slider_left-arrow')
 const nextButton = document.getElementById('slider_right-arrow')
 
-arts = [
-    'mountains', 
-    'red_beach', 
-    'yellow_beach'
-]
+const arts = ['mountains', 'red_beach', 'yellow_beach']
 
-// const width = 1280
-// slider.style.left = width * -1 + 'px'
-// let currElem = 0
+let currElem = 0
+let eventEnabled = true
 
-// for (let i = 0; i < arts.length; i++) {
-//     const li = document.createElement('li')
-//     li.className = 'slider_item'
-//     slider.append(li)
-//     li.style.backgroundImage = `url(images/slider/${arts[i]}.jpg)`
-// }
+const width = 1280
+slider.style.left = width * -1 + 'px'
 
+const frontEl = document.createElement('li')
+frontEl.className = 'slider_item'
+slider.append(frontEl)
 
-// const initSlider = () => {
-//     slider.innerHTML = ''
-//     if (currElem > arts.length-1) currElem = 0
-//     else if (currElem < 0) currElem = arts.length-1
-//     const li = document.createElement('li')
-//     li.className = 'slider_item'
-//     slider.append(li)
-    // li.style.backgroundImage = `url(images/slider/${arts[currElem]}.jpg)`
-    // prevElem()
-    // nextElem()
-// }
+const prevEl = document.createElement('li')
+prevEl.className = 'slider_item'
+slider.prepend(prevEl)
 
-// const prevElem = () => {
-//     let nextElem = currElem-1
-//     if (nextElem < 0) nextElem = arts.length - 1
-//     const li = document.createElement('li')
-//     li.className = 'slider_item'
-//     slider.prepend(li)
-//     li.style.backgroundImage = `url(images/slider/${arts[nextElem]}.jpg)`
-// }
-
-// const nextElem = () => {
-//     let prevElem = currElem+1
-//     if (currElem > arts.length-1) prevElem = 0
-//     const li = document.createElement('li')
-//     li.className = 'slider_item'
-//     slider.append(li)
-//     li.style.backgroundImage = `url(images/slider/${arts[prevElem]}.jpg)`
-// }
-
-// initSlider()
+const nextEl = document.createElement('li')
+nextEl.className = 'slider_item'
+slider.append(nextEl)
 
 
-// prevButton.addEventListener('click', () => {
-//     currElem -= 1
-//     initSlider()
-// })
+const disableEventForInterval = () => {
+    eventEnabled = false
+    setTimeout(() => {
+        eventEnabled = true
+    }, 1000)
+}
 
+const initSlider = () => {
+    if (!eventEnabled) return
 
-// nextButton.addEventListener('click', () => {
-//     currElem += 1
-//     initSlider()
-// })
+    if (currElem > arts.length-1) currElem = 0
+    else if (currElem < 0) currElem = arts.length - 1
+
+    let prevElem = currElem-1
+    let nextElem = currElem+1
+
+    if (prevElem > arts.length-1) prevElem = 0
+    else if (prevElem < 0) prevElem = arts.length - 1
+
+    if (nextElem > arts.length-1) nextElem = 0
+    else if (nextElem < 0) nextElem = arts.length - 1
+
+    frontEl.style.backgroundImage = `url(images/slider/${arts[currElem]}.jpg)`
+    prevEl.style.backgroundImage = `url(images/slider/${arts[prevElem]}.jpg)`
+    prevEl.style.filter = "brightness(70%)"
+    // prevEl.style.transition = 'background-image 0s ease'
+    nextEl.style.backgroundImage = `url(images/slider/${arts[nextElem]}.jpg)`
+    nextEl.style.filter = "brightness(70%)"
+    // nextEl.style.transition = 'background-image 0s ease'
+}
+
+initSlider()
+
+prevButton.addEventListener('click', () => {
+    if (!eventEnabled) return
+    currElem -= 1
+    initSlider()
+    disableEventForInterval()
+})
+
+nextButton.addEventListener('click', () => {
+    if (!eventEnabled) return
+    currElem += 1
+    initSlider()
+    disableEventForInterval()
+})
+
+setInterval(() => {
+    if (!eventEnabled) return
+    currElem += 1
+    initSlider()
+    disableEventForInterval()
+}, 4000)
