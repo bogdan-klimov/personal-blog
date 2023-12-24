@@ -35,10 +35,12 @@
 
 .icon-left-open:before { 
   content: '\e801'; 
+  display: block;
 } 
 
 .icon-right-open:before { 
   content: '\e802'; 
+  display: block;
 } 
 
 .icon-up-big:before { 

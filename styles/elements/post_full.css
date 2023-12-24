@@ -17,7 +17,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 480px;
-    margin-left: 70px;
+    margin-left: 40px;
 }
 
 .post-reversed .post_content {
@@ -58,7 +58,6 @@
     margin-top: 20px;
     color: var(--grey-dark-color);
     font-family: var(--serif-font);
-    /* text-align: center; */
 }
 
 .post_read-more {
@@ -84,11 +83,6 @@
     margin-top: auto;
     padding: 10px 35px;
 }
-
-/* .post_reversed {
-    display: flex;
-    justify-content: flex-end;
-} */
 
 .post_reversed .post_img {
     margin-right: 0;
