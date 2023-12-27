@@ -17,7 +17,7 @@
 <body>
     <header class="header" name="top">
         <div class="container">
-            <h1 class="title">Life Style Blog</h1>
+            <h1 class="page-title">Life Style Blog</h1>
             <span class="sub_title">
                 A theme for all life style and travel bloggers
             </span>
@@ -54,133 +54,14 @@
                 <li class="posts_sort-item">Fasion 1</li>
                 <li class="posts_sort-item">Lifestyle 9</li>
             </ul>
-            <div class="posts">
-                <li class="post">
-                    <div class="post_img post_img_1"></div>
-                    <div class="post_content">
-                        <span class="post_title">
-                            Travel - Europe
-                            <span class="post_by">by Bogdan</span>
-                        </span>
-                        <h2 class="post_head">
-                            Comment prevoir un sejour?
-                        </h2>
-                        <p class="post_text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Morbi vitae ultrices augue. 
-                            In hac habitasse platea 
-                            dictumst. Suspendisse finibus 
-                            augue nec mi luctus, ac 
-                            bibendum diam iaculis. 
-                            Maecenas vitae nisl ex. 
-                        </p>
-                        <a class="post_read-more" href="#">
-                            Read more
-                        </a>
-                    </div>
-                    <div class="post_data">
-                        12.05.23
-                    </div>
-                </li>
-                <li class="post">
-                    <div class="post_img post_img_1"></div>
-                    <div class="post_content">
-                        <span class="post_title">
-                            Travel - Europe
-                            <span class="post_by">by Bogdan</span>
-                        </span>
-                        <h2 class="post_head">
-                            Comment prevoir un sejour?
-                        </h2>
-                        <p class="post_text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Morbi vitae ultrices augue. 
-                            In hac habitasse platea 
-                            dictumst. Suspendisse finibus 
-                            augue nec mi luctus, ac 
-                            bibendum diam iaculis. 
-                            Maecenas vitae nisl ex. 
-                        </p>
-                        <a class="post_read-more" href="#">
-                            Read more
-                        </a>
-                    </div>
-                    <div class="post_data">
-                        12.05.23
-                    </div>
-                </li>
-                <li class="post">
-                    <div class="post_img post_img_1"></div>
-                    <div class="post_content">
-                        <span class="post_title">
-                            Travel - Europe
-                            <span class="post_by">by Bogdan</span>
-                        </span>
-                        <h2 class="post_head">
-                            Comment prevoir un sejour?
-                        </h2>
-                        <p class="post_text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Morbi vitae ultrices augue. 
-                            In hac habitasse platea 
-                            dictumst. Suspendisse finibus 
-                            augue nec mi luctus, ac 
-                            bibendum diam iaculis. 
-                            Maecenas vitae nisl ex. 
-                        </p>
-                        <a class="post_read-more" href="#">
-                            Read more
-                        </a>
-                    </div>
-                    <div class="post_data">
-                        12.05.23
-                    </div>
-                </li> 
-                <li class="post">
-                    <div class="post_img post_img_1"></div>
-                    <div class="post_content">
-                        <span class="post_title">
-                            Travel - Europe
-                            <span class="post_by">by Bogdan</span>
-                        </span>
-                        <h2 class="post_head">
-                            Comment prevoir un sejour?
-                        </h2>
-                        <p class="post_text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Morbi vitae ultrices augue. 
-                            In hac habitasse platea 
-                            dictumst. Suspendisse finibus 
-                            augue nec mi luctus, ac 
-                            bibendum diam iaculis. 
-                            Maecenas vitae nisl ex. 
-                        </p>
-                        <a class="post_read-more" href="#">
-                            Read more
-                        </a>
-                    </div>
-                    <div class="post_data">
-                        12.05.23
-                    </div>
-                </li> 
-            </div>
+            <ul class="posts" id="posts"></ul>
             <div class="load_more">
-                <div class="load_more-left">
+                <div class="load_more-left" id="load_more-left">
                     <div class="load_icon icon-left-open"></div>
                     <span class="load_more-txt">Back</span>
                 </div>
-                <ul class="load_more-list">
-                    <li class="load_more-item">1</li>
-                    <li class="load_more-item">2</li>
-                    <li class="load_more-item">3</li>
-                    <li class="load_more-item">...</li>
-                    <li class="load_more-item">6</li>
-                </ul>
-                <div class="load_more-right">
+                <ul class="load_more-list" id="load_more-list"></ul>
+                <div class="load_more-right" id="load_more-right">
                     <span class="load_more-txt">Next</span>
                     <div class="load_icon icon-right-open"></div>
                 </div>
@@ -194,5 +75,8 @@
             <div class="icon-up-big"></div>
         </a>
     </footer>
+    <script src="./../blog/posts.js"></script>
+    <script src="./../scripts/elements/post.js"></script>
+    <script src="./../scripts/pages/blog.js"></script>
 </body>
 </html>

@@ -59,6 +59,11 @@ html {
 
 .load_more-item:hover {
     color: #fff;
+    background-color: var(--grey-color);
+}
+
+.load_more-item.active {
+    color: #fff;
     background-color: var(--gold-color);
 }
 
@@ -67,6 +72,12 @@ html {
     align-items: center;
     font-family: var(--main-font);
     cursor: pointer;
+}
+
+.load_more-left.disabled,  
+.load_more-right.disabled{
+    color: var(--grey-color);
+    cursor: default;
 }
 
 .load_more-txt:nth-child(2) {
