@@ -1,9 +1,42 @@
+const categoriesWrapper = document.getElementById('categories')
+let currentCategory = 'all'
+let sortedPosts = posts
+
+const createCategory = (name, count) => {
+    const li = document.createElement('li')
+    li.classList.add('posts_sort-item')
+    li.innerText = name
+    const span = document.createElement('span')
+    span.classList.add('posts_sort-count')
+    span.innerText = count
+    li.append(span)
+    categoriesWrapper.append(li)
+}
+
+const initCategories = () => {
+    createCategory('all', posts.length)
+    for (let i = 0; i < categories.length; i++) {
+        createCategory(categories[i], categoriesCount[i])
+    }
+}
+
+initCategories()
+
+const categoriesButtons = document.getElementsByClassName('posts_sort-item')
+categoriesButtons[0].classList.add('active')
+
+const clearActiveCategories = () => {
+    for (let i = 0; i < categoriesButtons.length; i++) {
+        categoriesButtons[i].classList.remove('active')
+    }
+}
+
 const postsCount = 4
 const postsWrapper = document.getElementById('posts')
 const loadList = document.getElementById('load_more-list')
 const leftArrow = document.getElementById('load_more-left')
 const rightArrow = document.getElementById('load_more-right')
-const postCollectionLength = Math.ceil(posts.length / postsCount)
+let postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
 let extraLoadItems = []
 let loadActiveFlag = true
 let currentPage = 1
@@ -16,13 +49,13 @@ const renderPosts = (page) => {
     for (let i = 0 + postsCount*(page-1); i < postsCount*page; i++) {
         createPost(
             postsWrapper, 
-            posts[i].category, 
-            posts[i].author, 
-            posts[i].title, 
-            posts[i].p, 
-            posts[i].data 
+            sortedPosts[i].category, 
+            sortedPosts[i].author, 
+            sortedPosts[i].title, 
+            sortedPosts[i].p, 
+            sortedPosts[i].data 
         )
-        if (i + 1 == posts.length) break
+        if (i + 1 == sortedPosts.length) break
     }    
 }
 
@@ -96,9 +129,11 @@ const renderExtraLoad = () => {
 const renderLoadList = () => {
     loadActiveFlag = true
     loadList.innerHTML = ''
+    leftArrow.style.display = 'flex'
+    rightArrow.style.display = 'flex'
     if (postCollectionLength == 1) {
-        leftArrow.innerHTML = ''
-        rightArrow.innerHTML = ''
+        leftArrow.style.display = 'none'
+        rightArrow.style.display = 'none'
     } else if (postCollectionLength > 1 && postCollectionLength < 6) {
         for (let i = 0; i < postCollectionLength; i++) {
             createLoadItem(i+1)
@@ -188,3 +223,27 @@ const switchToLeft = () => {
 
 rightArrow.addEventListener('click', switchToRight)
 leftArrow.addEventListener('click', switchToLeft)
+
+for (let i = 0; i < categoriesButtons.length; i++) {
+    categoriesButtons[i].addEventListener('click', () => {
+        if (categoriesButtons[i].innerText.split("\n")[0].toLowerCase() == 'all') {
+            clearActiveCategories()
+            categoriesButtons[0].classList.add('active')
+            sortedPosts = posts
+        } else {
+            sortedPosts = []
+            clearActiveCategories()
+            categoriesButtons[i].classList.add('active')
+            for (let j = 0; j < posts.length; j++) {
+                const chosenCategory = categoriesButtons[i].innerText.split("\n")[0].toLowerCase()
+                if (chosenCategory == posts[j].category.toLowerCase()) {
+                    sortedPosts.push(posts[j])
+                }
+            }
+        }
+        postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
+        currentPage = 1
+        initLoad()
+        setLoadActive(0)
+    })
+}
