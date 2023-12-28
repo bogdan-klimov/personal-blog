@@ -51,6 +51,9 @@ html {
     margin-left: 15px;
     transition: .2s;
     padding-top: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .load_more-item:first-child {
@@ -65,6 +68,20 @@ html {
 .load_more-item.active {
     color: #fff;
     background-color: var(--gold-color);
+}
+
+.load_more-input {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid var(--main-color);
+    text-align: center;
+    font-family: var(--josefin-font);
+    color: var(--main-color);
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
 }
 
 .load_more-left, .load_more-right {
