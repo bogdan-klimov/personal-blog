@@ -97,11 +97,12 @@
     transition: background-image 1s ease;
 }
 
-.categories_blocks {
+.categories_wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
+    margin-left: -30px;
 }
 
 .categories_block {
@@ -122,7 +123,11 @@
     bottom: -2px;
     left: calc(50% - 140px);
     opacity: 0;
-    transition: .8s;
+    transition: .4s;
+}
+
+.categories_block.active .categories_hover {
+    opacity: 1;
 }
 
 .categories_block:hover {
@@ -131,20 +136,6 @@
 
 .categories_block:hover .categories_hover {
     opacity: 1;
-}
-
-.categories_block:first-child {
-    margin-left: 0;
-    background-image: url(./../images/travel.jpg);
-}
-
-.categories_block:nth-child(2) {
-    background-image: url(./../images/life-style.jpg);
-}
-
-.categories_block:nth-child(3) {
-    margin-right: 0;
-    background-image: url(./../images/insperetion.jpg);
 }
 
 .categories_text {
@@ -399,4 +390,170 @@
     background-image: url(./../images/galery/galery_6.jpg);
 }
 
+.post {
+    max-width: 100%;
+    display: flex;
+    margin-top: 55px;
+}
+
+.post_img {
+    height: 280px;
+    width: 100%;
+    max-width: 386.67px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 25px;
+}
+
+.post_data {
+    width: 30px;
+    height: 50px;
+    background-color: var(--gold-color);
+    color: var(--white-color);
+    font-family: var(--main-font);
+    text-align: center;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .9rem;
+    user-select: none;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.post_white {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    background-color: var(--white-color);
+}
+
+.post_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-reversed .post_content {
+    justify-content: flex-end;
+}
+
+
+.post_title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .9rem;
+    color: var(--gold-color);
+    font-weight: 500;
+}
+
+.post_by {
+    font-size: .8rem;
+    font-family: var(--pacifico-font);
+    text-transform: none;
+    color: var(--grey-color);
+    margin-left: 15px;
+}
+
+.post_head {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: var(--josefin-font);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-left: -55px;
+}
+
+.post_text {
+    max-width: 400px;
+    margin-top: 20px;
+    color: var(--grey-dark-color);
+    font-family: var(--serif-font);
+}
+
+.post_read-more {
+    font-family: var(--serif-font);
+    display: block;
+    color: var(--gold-color);
+    max-width: 76px;
+    text-transform: capitalize;
+    transition: .3s;
+    user-select: none;
+    margin-top: 25px;
+}
+
+.post_read-more_line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--gold-color);
+    display: block;
+    margin-top: 5px;
+    width: 1px;
+    transition: .3s;
+    margin-left: 38px;
+    opacity: 0;
+}
+
+.post_read-more:hover .post_read-more_line {
+    transform: scale(76, 1);
+    opacity: 1;
+}
+
+.post_reversed {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post_reversed .post_img {
+    margin-right: 0;
+    margin-left: 35px;
+}
+
+.post_reversed .post_data, .post_reversed .post_white {
+    margin-left: 0;
+}
+
+.post_reversed .post_title, .post_reversed .post_read-more {
+    margin-left: auto;
+}
+
+.post_reversed .post_head {
+    margin-left: auto;
+    margin-right: -60px;
+    z-index: 3;
+}
+
+.post_reversed .post_text {
+    text-align: right;
+}
+
+.posts_sort {
+    display: flex;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    margin-top: 55px;
+    width: 100%;
+}
+
+.posts_sort-item {
+    width: 100%;
+    border: 1px solid var(--gold-color);
+    padding: 15px;
+    margin-left: -1px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.posts_sort-item:hover {
+    background-color: var(--gold-color);
+    color: var(--white-color);
+}
 

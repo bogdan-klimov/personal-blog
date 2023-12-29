@@ -1,9 +1,27 @@
 const posts = [
     {
-        title: 'First page',
+        title: 'First Travel Destinations You Shouldn\'t Miss',
         cover: '',
-        preview: '',
-        data: '11.12.2021',
+        preview: 'post_2.jpg',
+        data: '12.12.2021',
+        category: 'inspiration',
+        author: 'bodya',
+        h1: 'How we did it?',
+        p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
+        p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
+        h2: 'Brilliant city',
+        p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
+        h3: 'Night',
+        p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
+        h4: 'Conclusion',
+        p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.'
+    },
+    {
+        name: '',
+        title: 'Travel  You Shouldn\'t hello t1',
+        cover: '',
+        preview: 'post_1.jpg',
+        data: '21.12.2006',
         category: 'travel',
         author: 'by Bodya',
         h1: 'How we did it?',
@@ -19,7 +37,7 @@ const posts = [
     {
         title: 'Travel Destinations You Shouldn\'t Miss',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '12.12.2021',
         category: 'inspiration',
         author: 'bodya',
@@ -36,7 +54,7 @@ const posts = [
     {
         title: 'Hello world',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '11.12.2021',
         category: 'food',
         author: 'bodya',
@@ -53,7 +71,7 @@ const posts = [
     {
         title: 'First page',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'inspiration',
         author: 'bodya',
@@ -70,7 +88,7 @@ const posts = [
     {
         title: 'Second page',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
         category: 'food',
         author: 'bodya',
@@ -85,9 +103,9 @@ const posts = [
         p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.'
     },
     {
-        title: 'Hello world',
+        title: 'Hello world t2',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '11.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -104,7 +122,7 @@ const posts = [
     {
         title: 'Travel Destinations You Shouldn\'t Miss',
         cover: '',
-        preview: '',
+        preview: 'post_1.jpg',
         data: '12.12.2021',
         category: 'photos',
         author: 'bodya',
@@ -121,7 +139,7 @@ const posts = [
     {
         title: 'Second page',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'lifestyle',
         author: 'bodya',
@@ -138,7 +156,7 @@ const posts = [
     {
         title: 'Third page',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
         category: 'fasion',
         author: 'bodya',
@@ -153,9 +171,9 @@ const posts = [
         p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.'
     },
     {
-        title: 'last',
+        title: 'last t3',
         cover: '',
-        preview: '',
+        preview: 'post_1.jpg',
         data: '11.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -170,9 +188,9 @@ const posts = [
         p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.'
     },
     {
-        title: 'Hello world',
+        title: 'Hello world t4',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -189,7 +207,7 @@ const posts = [
     {
         title: 'Third page',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '12.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -206,7 +224,7 @@ const posts = [
     {
         title: 'Fourth page',
         cover: '',
-        preview: '',
+        preview: 'post_1.jpg',
         data: '11.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -223,7 +241,7 @@ const posts = [
     {
         title: 'Hello world',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
         category: 'travel',
         author: 'bodya',
@@ -240,7 +258,7 @@ const posts = [
     {
         title: 'last',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '11.12.2021',
         category: 'category 3',
         author: 'bodya',
@@ -257,7 +275,7 @@ const posts = [
     {
         title: 'Fourth page',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'category 0',
         author: 'bodya',
@@ -274,7 +292,7 @@ const posts = [
     {
         title: 'Fifth page',
         cover: '',
-        preview: '',
+        preview: 'post_1.jpg',
         data: '12.12.2021',
         category: 'category 1',
         author: 'bodya',
@@ -291,7 +309,7 @@ const posts = [
     {
         title: 'Hello world',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
         category: 'category 2',
         author: 'bodya',
@@ -308,7 +326,7 @@ const posts = [
     {
         title: 'Hello world',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '11.12.2021',
         category: 'category 3',
         author: 'bodya',
@@ -325,7 +343,7 @@ const posts = [
     {
         title: 'Fifth page',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'category 3',
         author: 'bodya',
@@ -342,9 +360,9 @@ const posts = [
     {
         title: 'Sixth page',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
-        category: 'category 0',
+        category: 'lifestyle',
         author: 'bodya',
         h1: 'How we did it?',
         p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
@@ -359,7 +377,7 @@ const posts = [
     {
         title: 'Travel Destinations You Shouldn\'t Miss',
         cover: '',
-        preview: '',
+        preview: 'post_1.jpg',
         data: '12.12.2021',
         category: 'category 1',
         author: 'bodya',
@@ -376,7 +394,7 @@ const posts = [
     {
         title: 'Hello world',
         cover: '',
-        preview: '',
+        preview: 'post_4.jpg',
         data: '11.12.2021',
         category: 'category 2',
         author: 'bodya',
@@ -393,7 +411,7 @@ const posts = [
     {
         title: 'Sixth page',
         cover: '',
-        preview: '',
+        preview: 'post_2.jpg',
         data: '11.12.2021',
         category: 'category 3',
         author: 'bodya',
@@ -410,7 +428,7 @@ const posts = [
     {
         title: 'Seventh',
         cover: '',
-        preview: '',
+        preview: 'post_3.jpg',
         data: '11.12.2021',
         category: 'category 3',
         author: 'bodya',

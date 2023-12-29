@@ -1,3 +1,22 @@
+const createPost = (wrapper, category, author, title, p, data, preview) => {
+    const post = 
+    `<li class="post">
+        <div class="post_img" id="post_img" style="background-image: url(../blog/posts/${preview})">
+            <div class="post_data">${data}</div>
+        </div>
+        <div class="post_content">
+            <span class="post_title">
+                ${category}
+                <span class="post_by">${author}</span>
+            </span>
+            <h2 class="post_head">${title}</h2>
+            <p class="post_text">${p}</p>
+            <a class="post_read-more" href="#">Read more</a>
+        </div>
+    </li>`
+    wrapper.insertAdjacentHTML('beforeend', post)
+}
+
 const categoriesWrapper = document.getElementById('categories')
 let currentCategory = 'all'
 let sortedPosts = posts
@@ -31,7 +50,6 @@ const clearActiveCategories = () => {
     }
 }
 
-const postsCount = 4
 const postsWrapper = document.getElementById('posts')
 const loadList = document.getElementById('load_more-list')
 const leftArrow = document.getElementById('load_more-left')
@@ -53,7 +71,8 @@ const renderPosts = (page) => {
             sortedPosts[i].author, 
             sortedPosts[i].title, 
             sortedPosts[i].p, 
-            sortedPosts[i].data 
+            sortedPosts[i].data,
+            sortedPosts[i].preview,
         )
         if (i + 1 == sortedPosts.length) break
     }    
@@ -99,7 +118,7 @@ const renderExtraLoad = () => {
             });
             input.addEventListener('keydown', (e) => {
                 if (e.key == 'Enter') {
-                    if (input.value > 1 && input.value < postCollectionLength) {
+                    if (input.value > 0 && input.value <= postCollectionLength) {
                         inputValue = Number(input.value)
                         currentPage = inputValue
                         initLoad()
