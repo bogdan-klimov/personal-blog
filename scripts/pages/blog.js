@@ -21,14 +21,16 @@ const categoriesWrapper = document.getElementById('categories')
 let sortedPosts = posts
 
 const createCategory = (name, count) => {
-    const li = document.createElement('li')
-    li.classList.add('posts_sort-item')
-    li.innerText = name
-    const span = document.createElement('span')
-    span.classList.add('posts_sort-count')
-    span.innerText = count
-    li.append(span)
-    categoriesWrapper.append(li)
+    const li = 
+    `
+    <a class="posts_sort-item" href="${url}/pages/blog.html?category=${name}">
+        ${name}    
+        <span class="posts_sort-count">
+            ${count}
+        </span>
+    </a>
+    `
+    categoriesWrapper.insertAdjacentHTML('beforeend', li)
 }
 
 const initCategories = () => {
@@ -245,18 +247,27 @@ rightArrow.addEventListener('click', switchToRight)
 leftArrow.addEventListener('click', switchToLeft)
 
 const sortCategories = (chosenCategory) => {
-    sortedPosts = []
-    clearActiveCategories()
-    categoriesButtons[categories.indexOf(chosenCategory)+1].classList.add('active')
-    for (let j = 0; j < posts.length; j++) {
-        if (chosenCategory == posts[j].category.toLowerCase()) {
-            sortedPosts.push(posts[j])
-        }
+    if (chosenCategory == 'all') {
+        sortedPosts = posts
+        postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
+        currentPage = 1
+        initLoad()
+        setLoadActive(0)
     }
-    postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
-    currentPage = 1
-    initLoad()
-    setLoadActive(0)
+    else {
+        sortedPosts = []
+        clearActiveCategories()
+        categoriesButtons[categories.indexOf(chosenCategory)+1].classList.add('active')
+        for (let j = 0; j < posts.length; j++) {
+            if (chosenCategory == posts[j].category.toLowerCase()) {
+                sortedPosts.push(posts[j])
+            }
+        }
+        postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
+        currentPage = 1
+        initLoad()
+        setLoadActive(0)
+    }
 }
 
 for (let i = 0; i < categoriesButtons.length; i++) {
@@ -275,4 +286,6 @@ for (let i = 0; i < categoriesButtons.length; i++) {
     })
 }
 
-if (currentCategory != 'all') sortCategories(currentCategory) 
+const urlParams = new URLSearchParams(window.location.search);
+const linkParam = urlParams.get('category');
+if (linkParam) sortCategories(linkParam) 

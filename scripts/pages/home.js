@@ -262,11 +262,12 @@ renderPosts()
 
 const sideCategoriesWrapper = document.getElementById('categories_list')
 
+
 const createSideCategory = (name, count) => {
     const category = 
     `
     <li class="categories_list-item">
-        <a href="pages/blog.html" class="categories_list-link">
+        <a href="pages/blog.html?category=${name}" class="categories_list-link">
             ${name}
             <span class="categories_count">${count}</span>
         </a>
@@ -280,7 +281,6 @@ for (let i = 0; i < categories.length; i++) {
 }
 
 const categoriesList = document.getElementsByClassName('categories_list-item')
-// const currentCategory = 'all'
 
 for (let i = 0; i < categoriesList.length; i++) {
     categoriesList[i].addEventListener('click', () => {

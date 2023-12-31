@@ -115,6 +115,7 @@
 .categories_item {
     padding-top: 20px;
     cursor: pointer;
+    display: block;
 }
 
 #categories_link {

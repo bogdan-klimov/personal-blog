@@ -277,7 +277,7 @@ const posts = [
         cover: '',
         preview: 'post_4.jpg',
         data: '11.12.2021',
-        category: 'category 0',
+        category: 'cool places',
         author: 'bodya',
         h1: 'How we did it?',
         p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
