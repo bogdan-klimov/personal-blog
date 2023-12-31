@@ -23,7 +23,7 @@ let sortedPosts = posts
 const createCategory = (name, count) => {
     const li = 
     `
-    <a class="posts_sort-item" href="${url}/pages/blog.html?category=${name}">
+    <a class="posts_sort-item" href="${url}/blog.html?category=${name}">
         ${name}    
         <span class="posts_sort-count">
             ${count}

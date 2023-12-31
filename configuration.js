@@ -1,5 +1,5 @@
-// const url = 'https://bogdan-klimov.github.io/personal-blog/' // For git hub
-const url = 'http://localhost:5500' // For local host
+const url = 'https://bogdan-klimov.github.io/personal-blog/' // For git hub
+// const url = 'http://localhost:5500' // For local host
 
 const title = 'Life Style'
 const subTitle = 'a theme for all life style and travel bloggers 1'

@@ -267,7 +267,7 @@ const createSideCategory = (name, count) => {
     const category = 
     `
     <li class="categories_list-item">
-        <a href="pages/blog.html?category=${name}" class="categories_list-link">
+        <a href="blog.html?category=${name}" class="categories_list-link">
             ${name}
             <span class="categories_count">${count}</span>
         </a>

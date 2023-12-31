@@ -19,7 +19,7 @@ const initSiteNavigation = () => {
         </li>
         <ul class="nav_categories-list" id="nav_categories-list"></ul>
         <li class="nav_item">
-            <a href="${url}/pages/blog.html">blog</a>
+            <a href="${url}/blog.html">blog</a>
         </li>
         <li class="nav_item">
             <a href="./../../pages/about/about.html">about</a>
@@ -55,7 +55,7 @@ for (let i = 0; i < categories.length; i++) {
     const li = 
     `
     <li>
-        <a class="categories_item" href="${url}/pages/blog.html?category=${categories[i]}">
+        <a class="categories_item" href="${url}/blog.html?category=${categories[i]}">
             ${categories[i]}
         </a>
     </li>
