@@ -366,30 +366,6 @@
     background-size: cover;
 }
 
-.gallery_item:nth-child(1) {
-    background-image: url(./../images/galery/galery_1.jpg);
-}
-
-.gallery_item:nth-child(2) {
-    background-image: url(./../images/galery/galery_2.jpg);
-}
-
-.gallery_item:nth-child(3) {
-    background-image: url(./../images/galery/galery_3.jpg);
-}
-
-.gallery_item:nth-child(4) {
-    background-image: url(./../images/galery/galery_4.jpg);
-}
-
-.gallery_item:nth-child(5) {
-    background-image: url(./../images/galery/galery_5.jpg);
-}
-
-.gallery_item:nth-child(6) {
-    background-image: url(./../images/galery/galery_6.jpg);
-}
-
 .post {
     max-width: 100%;
     display: flex;
@@ -556,4 +532,7 @@
     background-color: var(--gold-color);
     color: var(--white-color);
 }
+
+
+
 

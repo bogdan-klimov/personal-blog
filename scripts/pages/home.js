@@ -35,9 +35,9 @@ const initSlider = () => {
     else if (prevElem < 0) prevElem = arts.length - 1
     if (nextElem > arts.length-1) nextElem = 0
     else if (nextElem < 0) nextElem = arts.length - 1
-    frontEl.style.backgroundImage = `url(images/slider/${arts[currElem]}.jpg)`
-    prevEl.style.backgroundImage = `url(images/slider/${arts[prevElem]}.jpg)`
-    nextEl.style.backgroundImage = `url(images/slider/${arts[nextElem]}.jpg)`
+    frontEl.style.backgroundImage = `url(images/slider/${arts[currElem]})`
+    prevEl.style.backgroundImage = `url(images/slider/${arts[prevElem]})`
+    nextEl.style.backgroundImage = `url(images/slider/${arts[nextElem]})`
     prevEl.style.filter = "brightness(70%)"
     nextEl.style.filter = "brightness(70%)"
     // prevEl.style.transition = 'background-image 0s ease'
@@ -259,3 +259,40 @@ for (let i = 0; i < mainCategoriesBlocks.length; i++) {
 
 sortPosts(mainCategoriesBlocks[0].innerText.toLowerCase())
 renderPosts()
+
+const sideCategoriesWrapper = document.getElementById('categories_list')
+
+const createSideCategory = (name, count) => {
+    const category = 
+    `
+    <li class="categories_list-item">
+        <a href="pages/blog.html" class="categories_list-link">
+            ${name}
+            <span class="categories_count">${count}</span>
+        </a>
+    </li>
+    `
+    sideCategoriesWrapper.insertAdjacentHTML('beforeend', category)
+}
+
+for (let i = 0; i < categories.length; i++) {
+    createSideCategory(categories[i], categoriesCount[i])
+}
+
+const categoriesList = document.getElementsByClassName('categories_list-item')
+// const currentCategory = 'all'
+
+for (let i = 0; i < categoriesList.length; i++) {
+    categoriesList[i].addEventListener('click', () => {
+        currentCategory = categories[i]
+    })
+}
+
+const galleryWrapper = document.getElementById('gallery')
+
+for (let i = 0; i < gallery.length; i++) {
+    const li = document.createElement('li')
+    li.classList.add('gallery_item')
+    li.style.backgroundImage = `url(blog/images/gallery/${gallery[i]})`
+    galleryWrapper.append(li)
+}

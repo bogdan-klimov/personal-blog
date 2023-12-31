@@ -1,8 +1,11 @@
+const title = 'Life Style'
+const subTitle = 'a theme for all life style and travel bloggers 1'
+
 const sliderTime = 5 // Time of slider interval in seconds
 const arts = [
-    'mountains', 
-    'red_beach', 
-    'yellow_beach'
+    'mountains.jpg',
+    'red_beach.jpg',
+    'yellow_beach.jpg',
 ] // Arts for slider
 
 const postsCount = 3 // Number of posts in blog 
@@ -40,11 +43,27 @@ const quotesList = [
 ] // Quotes for quote block, limited by quotesLimit
 
 const gallery = [
+    'gallery_1.jpg',
+    'gallery_2.jpg',
+    'gallery_3.jpg',
+    'gallery_4.jpg',
+    'gallery_5.jpg',
+    'gallery_6.jpg',
+] // Pictures for gallery (I recommend 6)
+
+// About page:
 
 
 
 
 
 
-] // Pictures for gallery
+
+// Contact page:
+
+
+
+
+
+
 

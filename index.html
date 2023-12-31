@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <div class="categories_click-field" id="categories_click-field"></div>
     <header class="header" name="top">
         <div class="container">
-            <h1 class="page-title">Life Style Blog</h1>
-            <span class="sub_title">
+            <h1 class="page-title" id="page-title">Life Style Blog</h1>
+            <span class="sub_title" id="sub_title">
                 A theme for all life style and travel bloggers
             </span>
             <nav class="nav">
@@ -25,9 +26,11 @@
                     <li class="nav_item">
                         <a href="./index.html">home</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#">categories</a>
+                    <li class="nav_item" id="categories_link">
+                        categories
+                        <div class="icon-right-open" id="categories_icon-right-open"></div>
                     </li>
+                    <ul class="nav_categories-list" id="nav_categories-list"></ul>
                     <li class="nav_item">
                         <a href="./pages/blog.html">blog</a>
                     </li>
@@ -93,43 +96,8 @@
                     </div>
                     <div class="side_item">
                         <h2 class="side_title">Categories</h2>
-                        <ul class="categories_list">
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    travel
-                                    <span class="categories_count">13</span>
-                                </a>
-                            </li>
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    fashion
-                                    <span class="categories_count">9</span>
-                                </a>
-                            </li>
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    lifestyle
-                                    <span class="categories_count">7</span>
-                                </a>
-                            </li>
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    food
-                                    <span class="categories_count">3</span>
-                                </a>
-                            </li>
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    inspiration
-                                    <span class="categories_count">2</span>
-                                </a>
-                            </li>
-                            <li class="categories_list-item">
-                                <a href="#" class="categories_list-link">
-                                    photography
-                                    <span class="categories_count">0</span>
-                                </a>
-                            </li>
+                        <ul class="categories_list" id="categories_list">
+
                         </ul>
                     </div>
                     <div class="side_item" id="side_item-quote">
@@ -146,17 +114,8 @@
                 </div>
             </div>
         </div>
-        <h2 class="gallery_title">
-            Gallery 
-        </h2>
-        <ul class="gallery">
-            <li class="gallery_item"></li>
-            <li class="gallery_item"></li>
-            <li class="gallery_item"></li>
-            <li class="gallery_item"></li>
-            <li class="gallery_item"></li>
-            <li class="gallery_item"></li>
-        </ul>
+        <h2 class="gallery_title">Gallery</h2>
+        <ul class="gallery" id="gallery"></ul>
     </main>
     <footer class="footer">
         <div class="copyright">Designed by Stonyart</div>
@@ -165,9 +124,10 @@
             <div class="icon-up-big"></div>
         </a>
     </footer>
-    <!-- <script src="scripts/script.js"></script> -->
     <script src="blog/posts.js"></script>
     <script src="configuration.js"></script>
+    <script src="scripts/elements/header.js"></script>
+    <script src="scripts/elements/categories.js"></script>
     <script src="scripts/pages/home.js"></script>
 </body>
 </html>

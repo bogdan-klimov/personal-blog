@@ -18,7 +18,6 @@ const createPost = (wrapper, category, author, title, p, data, preview) => {
 }
 
 const categoriesWrapper = document.getElementById('categories')
-let currentCategory = 'all'
 let sortedPosts = posts
 
 const createCategory = (name, count) => {
@@ -88,8 +87,10 @@ const createLoadItem = (idx) => {
 }
 
 const setLoadActive = (idx) => {
-    for (let i = 0; i < loadItems.length; i++) {loadItems[i].classList.remove('active')}
-    loadItems[idx].classList.add('active')
+    if (loadItems.length != 0) {
+        for (let i = 0; i < loadItems.length; i++) {loadItems[i].classList.remove('active')}
+        loadItems[idx].classList.add('active')
+    }
 }
 
 const buttonsControll = () => {
@@ -243,26 +244,35 @@ const switchToLeft = () => {
 rightArrow.addEventListener('click', switchToRight)
 leftArrow.addEventListener('click', switchToLeft)
 
+const sortCategories = (chosenCategory) => {
+    sortedPosts = []
+    clearActiveCategories()
+    categoriesButtons[categories.indexOf(chosenCategory)+1].classList.add('active')
+    for (let j = 0; j < posts.length; j++) {
+        if (chosenCategory == posts[j].category.toLowerCase()) {
+            sortedPosts.push(posts[j])
+        }
+    }
+    postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
+    currentPage = 1
+    initLoad()
+    setLoadActive(0)
+}
+
 for (let i = 0; i < categoriesButtons.length; i++) {
     categoriesButtons[i].addEventListener('click', () => {
         if (categoriesButtons[i].innerText.split("\n")[0].toLowerCase() == 'all') {
             clearActiveCategories()
             categoriesButtons[0].classList.add('active')
             sortedPosts = posts
+            postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
+            currentPage = 1
+            initLoad()
+            setLoadActive(0)
         } else {
-            sortedPosts = []
-            clearActiveCategories()
-            categoriesButtons[i].classList.add('active')
-            for (let j = 0; j < posts.length; j++) {
-                const chosenCategory = categoriesButtons[i].innerText.split("\n")[0].toLowerCase()
-                if (chosenCategory == posts[j].category.toLowerCase()) {
-                    sortedPosts.push(posts[j])
-                }
-            }
+            sortCategories(categoriesButtons[i].innerText.split("\n")[0].toLowerCase())
         }
-        postCollectionLength = Math.ceil(sortedPosts.length / postsCount)
-        currentPage = 1
-        initLoad()
-        setLoadActive(0)
     })
 }
+
+if (currentCategory != 'all') sortCategories(currentCategory) 

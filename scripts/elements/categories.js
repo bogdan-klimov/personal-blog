@@ -9,3 +9,5 @@ for (let i = 0; i < categories.length; i++) {
         }
     }
 }
+
+let currentCategory = 'all'
