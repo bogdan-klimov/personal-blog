@@ -1,4 +1,4 @@
-const url = 'https://bogdan-klimov.github.io/personal-blog/' // For git hub
+const url = 'https://bogdan-klimov.github.io/personal-blog' // For git hub
 // const url = 'http://localhost:5500' // For local host
 
 const title = 'Life Style'
