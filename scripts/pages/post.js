@@ -30,27 +30,33 @@ const initNavButtons = () => {
 
 initNavButtons()
 
+const titlesList = []
+
 const createContentElemet = (element, value) => {
     switch (element) {
         case 'h1':
             const h1 = document.createElement('h1')
             h1.innerText = value
             contentWrapper.append(h1)
+            titlesList.push([h1, value])
             break
         case 'h2':
             const h2 = document.createElement('h2')
             h2.innerText = value
             contentWrapper.append(h2)
+            titlesList.push([h2, value])
             break
         case 'h3':
             const h3 = document.createElement('h3')
             h3.innerText = value
             contentWrapper.append(h3)
+            titlesList.push([h3, value])
             break
         case 'h4':
             const h4 = document.createElement('h4')
             h4.innerText = value
             contentWrapper.append(h4)
+            titlesList.push([h4, value])
             break
         case 'p':
             const p = document.createElement('p')
@@ -58,9 +64,9 @@ const createContentElemet = (element, value) => {
             contentWrapper.append(p)
             break
         case 'image':
-            const img = document.createElement('image')
+            const img = document.createElement('img')
             img.classList.add('img')
-            img.src = 'blog/'
+            img.src = `content/images/posts/${value}`
             contentWrapper.append(img)
             break
     }
@@ -79,11 +85,22 @@ for (let i = 0; i < contentData.length; i++) {
     }
 }
 
+const catalogList = document.getElementById('catalog_list')
 
+const createCatalogItem = (name, i) => {
+    const li = 
+    `
+    <li class="catalog_item">
+        <a href="#${i}">${name}</a>
+    </li>
+    `
+    catalogList.insertAdjacentHTML('beforeend', li)
+}
 
-
-
-
+for (let i = 0; i < titlesList.length; i++) {
+    titlesList[i][0].id = i
+    createCatalogItem(titlesList[i][1], i)
+}
 
 const popUp = document.getElementById('pop_up')
 const images = document.getElementsByClassName('img')
@@ -102,4 +119,3 @@ popUp.addEventListener('click', () => {
     popUp.classList.remove('active')
     document.documentElement.style.overflow = 'unset'
 })
-

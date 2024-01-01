@@ -35,9 +35,9 @@ const initSlider = () => {
     else if (prevElem < 0) prevElem = arts.length - 1
     if (nextElem > arts.length-1) nextElem = 0
     else if (nextElem < 0) nextElem = arts.length - 1
-    frontEl.style.backgroundImage = `url(images/slider/${arts[currElem]})`
-    prevEl.style.backgroundImage = `url(images/slider/${arts[prevElem]})`
-    nextEl.style.backgroundImage = `url(images/slider/${arts[nextElem]})`
+    frontEl.style.backgroundImage = `url(content/images/slider/${arts[currElem]})`
+    prevEl.style.backgroundImage = `url(content/images/slider/${arts[prevElem]})`
+    nextEl.style.backgroundImage = `url(content/images/slider/${arts[nextElem]})`
     prevEl.style.filter = "brightness(70%)"
     nextEl.style.filter = "brightness(70%)"
 }

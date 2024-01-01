@@ -210,7 +210,7 @@
     display: block;
     margin: 30px auto;
     border-radius: 50%;
-    background-image: url(./../images/about-portret.jpg);
+    background-image: url(./../content/images/about-portret.jpg);
     background-size: cover;
 }
 

@@ -14,17 +14,17 @@ let posts = [
             },
             {
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_1.jpg',
             },
             {
                 h2: 'Brilliant city',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_2.jpg',
             },
             {
                 h3: 'Night',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_3.jpg',
             },
             {
                 h4: 'Conclusion',
@@ -47,17 +47,17 @@ let posts = [
             },
             {
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_1.jpg',
             },
             {
                 h2: 'Brilliant city',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_3.jpg',
             },
             {
                 h3: 'Night',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_2.jpg',
             },
             {
                 h4: 'Conclusion',
@@ -537,22 +537,22 @@ let posts = [
         description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
         content: [
             {
-                h1: 'How we did it?',
+                h1: 'That\'s fantastic!',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
             },
             {
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_3.jpg',
             },
             {
                 h2: 'Brilliant city',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_1.jpg',
             },
             {
                 h3: 'Night',
                 p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
-                image: '',
+                image: 'post_1.jpg',
             },
             {
                 h4: 'Conclusion',
