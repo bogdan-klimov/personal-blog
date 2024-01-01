@@ -1,4 +1,4 @@
-const createPost = (wrapper, category, author, title, p, data, preview) => {
+const createPost = (wrapper, category, author, title, description, data, preview, id) => {
     const post = 
     `<li class="post">
         <div class="post_img" id="post_img" style="background-image: url(blog/posts/${preview})">
@@ -10,8 +10,8 @@ const createPost = (wrapper, category, author, title, p, data, preview) => {
                 <span class="post_by">${author}</span>
             </span>
             <h2 class="post_head">${title}</h2>
-            <p class="post_text">${p}</p>
-            <a class="post_read-more" href="#">Read more</a>
+            <p class="post_text">${description}</p>
+            <a class="post_read-more" href="${url}/post.html?id=${id}">Read more</a>
         </div>
     </li>`
     wrapper.insertAdjacentHTML('beforeend', post)
@@ -71,9 +71,10 @@ const renderPosts = (page) => {
             sortedPosts[i].category, 
             sortedPosts[i].author, 
             sortedPosts[i].title, 
-            sortedPosts[i].p, 
+            sortedPosts[i].description, 
             sortedPosts[i].data,
             sortedPosts[i].preview,
+            sortedPosts[i].id,
         )
         if (i + 1 == sortedPosts.length) break
     }    

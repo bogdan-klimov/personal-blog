@@ -40,8 +40,6 @@ const initSlider = () => {
     nextEl.style.backgroundImage = `url(images/slider/${arts[nextElem]})`
     prevEl.style.filter = "brightness(70%)"
     nextEl.style.filter = "brightness(70%)"
-    // prevEl.style.transition = 'background-image 0s ease'
-    // nextEl.style.transition = 'background-image 0s ease'
 }
 
 initSlider()
@@ -117,17 +115,17 @@ for (let i = 0; i < quoteButtons.length; i++) {
 const sliderBlockWrapper = document.getElementById('slider_block-wrapper')
 const categoriesWrapper = document.getElementById('categories_wrapper')
 
-const renderSliderBlock = (category, title) => {
+const renderSliderBlock = (id) => {
     const sliderBlock = 
     `
         <div class="slider_block">
             <span class="slider_block-head">
-                ${category}
+                ${posts[id].category}
             </span>
             <span class="slider_block-text">
-                ${title}
+                ${posts[id].title}
             </span>
-            <a class="slider_block-read" href="./pages/post.html">
+            <a class="slider_block-read" href="post.html?id=${0}">
                 Read more
             </a>
         </div>
@@ -135,7 +133,7 @@ const renderSliderBlock = (category, title) => {
     sliderBlockWrapper.insertAdjacentHTML('afterbegin', sliderBlock)
 }
 
-renderSliderBlock(posts[0].category, posts[0].title)
+renderSliderBlock(0)
 
 const createCategory = (name, preview) => {
     const category = 
@@ -160,9 +158,9 @@ const dataConverter = (data) => {
 
 const postsWrapper = document.getElementById('posts')
 
-const createPost = (direction, data, category, author, title, p, preview) => {
+const createPost = (data, category, author, title, description, preview, id, i) => {
     let post 
-    if (direction % 2 == 0) {
+    if (i % 2 == 0) {
         post = 
         `
         <li class="post">
@@ -178,8 +176,8 @@ const createPost = (direction, data, category, author, title, p, preview) => {
                     <span class="post_by">${author}</span>
                 </span>
                 <h2 class="post_head">${title}</h2>
-                <p class="post_text">${p}</p>
-                <a class="post_read-more" href="#">
+                <p class="post_text">${description}</p>
+                <a class="post_read-more" href="${url}/post.html?id=${id}">
                     Read more
                     <div class="post_read-more_line"></div>
                 </a>
@@ -196,8 +194,8 @@ const createPost = (direction, data, category, author, title, p, preview) => {
                     <span class="post_by">${author}</span>
                 </span>
                 <h2 class="post_head">${title}</h2>
-                <p class="post_text">${p}</p>
-                <a class="post_read-more" href="#">
+                <p class="post_text">${description}</p>
+                <a class="post_read-more" href="${url}/post.html?id=${id}">
                     Read more
                     <div class="post_read-more_line"></div>
                 </a>
@@ -222,13 +220,14 @@ const renderPosts = () => {
     if (sortedPosts.length < borders) borders = sortedPosts.length
     for (let i = 0; i < borders; i++) {
         createPost(
-            i,
             sortedPosts[i].data,
             sortedPosts[i].category,
             sortedPosts[i].author,
             sortedPosts[i].title,
-            sortedPosts[i].p,
-            sortedPosts[i].preview
+            sortedPosts[i].description,
+            sortedPosts[i].preview,
+            sortedPosts[i].id,
+            i,
         )
     }
 }

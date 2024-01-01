@@ -22,10 +22,10 @@ const initSiteNavigation = () => {
             <a href="${url}/blog.html">blog</a>
         </li>
         <li class="nav_item">
-            <a href="./../../pages/about/about.html">about</a>
+            <a href="${url}/about.html">about</a>
         </li>
         <li class="nav_item">
-            <a href="#">contact</a>
+            <a href="${url}/contact.html">contact</a>
         </li>
     </ul>
     `
