@@ -1,7 +1,7 @@
 const createPost = (wrapper, category, author, title, description, data, preview, id) => {
     const post = 
     `<li class="post">
-        <div class="post_img" id="post_img" style="background-image: url(blog/posts/${preview})">
+        <div class="post_img" id="post_img" style="background-image: url(content/images/posts/${preview})">
             <div class="post_data">${data}</div>
         </div>
         <div class="post_content">

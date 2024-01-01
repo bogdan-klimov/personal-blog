@@ -138,7 +138,7 @@ renderSliderBlock(0)
 const createCategory = (name, preview) => {
     const category = 
     `
-        <li class="categories_block" style="background-image: url(blog/images/categories/${preview})">
+        <li class="categories_block" style="background-image: url(content/images/categories/${preview})">
             <div class="categories_hover"></div>
             <span class="categories_text">${name}</span>
         </li>
@@ -164,7 +164,7 @@ const createPost = (data, category, author, title, description, preview, id, i) 
         post = 
         `
         <li class="post">
-            <div class="post_img" style="background-image: url(blog/posts/${preview})">
+            <div class="post_img" style="background-image: url(content/images/posts/${preview})">
                 <div class="post_data">
                     ${dataConverter(data)}
                 </div>
@@ -200,7 +200,7 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                     <div class="post_read-more_line"></div>
                 </a>
             </div>
-            <div class="post_img" style="background-image: url(blog/posts/${preview})">
+            <div class="post_img" style="background-image: url(content/images/posts/${preview})">
                 <div class="post_data">
                     ${dataConverter(data)}
                 </div>
@@ -292,6 +292,6 @@ const galleryWrapper = document.getElementById('gallery')
 for (let i = 0; i < gallery.length; i++) {
     const li = document.createElement('li')
     li.classList.add('gallery_item')
-    li.style.backgroundImage = `url(blog/images/gallery/${gallery[i]})`
+    li.style.backgroundImage = `url(content/images/gallery/${gallery[i]})`
     galleryWrapper.append(li)
 }
