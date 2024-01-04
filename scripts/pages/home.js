@@ -295,3 +295,4 @@ for (let i = 0; i < gallery.length; i++) {
     li.style.backgroundImage = `url(content/images/gallery/${gallery[i]})`
     galleryWrapper.append(li)
 }
+

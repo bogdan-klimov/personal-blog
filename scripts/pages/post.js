@@ -1,6 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const linkParam = urlParams.get('id');
 
+const cover = document.getElementById('cover')
+cover.style.backgroundImage = `url(content/images/posts/${posts[linkParam].cover})`
+
 const coverTitle = document.getElementById('cover_title')
 coverTitle.innerText = posts[linkParam].title
 

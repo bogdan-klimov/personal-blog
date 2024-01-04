@@ -51,7 +51,7 @@ const clearActiveCategories = () => {
     }
 }
 
-const postsWrapper = document.getElementById('posts')
+const postsWrapper = document.getElementById('posts_wrapper')
 const loadList = document.getElementById('load_more-list')
 const leftArrow = document.getElementById('load_more-left')
 const rightArrow = document.getElementById('load_more-right')

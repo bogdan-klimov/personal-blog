@@ -14,22 +14,27 @@
     <link rel="stylesheet" href="./styles/pages/blog.css">
 </head>
 <body>
-    <header class="header" name="top">
+    <header class="header">
         <div class="categories_click-field" id="categories_click-field"></div>
         <div class="container">
-            <h1 class="page-title" id="page-title">Life Style Blog</h1>
-            <span class="sub_title" id="sub_title">
-                A theme for all life style and travel bloggers
-            </span>
+            <h1 class="page-title" id="page-title"></h1>
+            <span class="sub_title" id="sub_title"></span>
             <nav class="nav" id="nav">
-                <div class="search_block icon-search"></div>
+                <div class="icon_search icon-search" id="icon_search"></div>
+                <div class="search_wrapper" id="search_wrapper">
+                    <div class="search_head">
+                        <div class="icon_search icon-search"></div>
+                        <input id="search_input" type="text" class="search_input">
+                    </div>
+                    <ul class="search_block" id="search_block"></ul>
+                </div>
             </nav>
         </div>
     </header>
     <main class="main">
         <div class="container">
             <ul class="posts_sort" id="categories"></ul>
-            <ul class="posts" id="posts"></ul>
+            <ul class="posts" id="posts_wrapper"></ul>
             <div class="load_more">
                 <div class="load_more-left" id="load_more-left">
                     <div class="load_icon icon-left-open"></div>
@@ -51,8 +56,8 @@
         </a>
     </footer>
     <script src="content/configuration.js"></script>
-    <script src="./scripts/elements/header.js"></script>
     <script src="./content/posts.js"></script>
+    <script src="./scripts/elements/header.js"></script>
     <script src="./scripts/elements/categories.js"></script>
     <script src="./scripts/pages/blog.js"></script>
 </body>

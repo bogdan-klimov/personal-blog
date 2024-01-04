@@ -94,7 +94,10 @@
     width: 1280px;
     height: 550px;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
     transition: background-image 1s ease;
+    object-fit: cover; 
 }
 
 .categories_wrapper {

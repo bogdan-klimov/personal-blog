@@ -1,5 +1,5 @@
-const url = 'https://bogdan-klimov.github.io/personal-blog' // For git hub
-// const url = 'http://localhost:5500' // For local host
+// const url = 'https://bogdan-klimov.github.io/personal-blog' // For github
+const url = 'http://localhost:5500' // For local host
 
 const title = 'Life Style Blog'
 const subTitle = 'a theme for all life style and travel bloggers!'
@@ -9,6 +9,7 @@ const arts = [
     'mountains.jpg',
     'red_beach.jpg',
     'yellow_beach.jpg',
+    // 'white_black.jpg',
 ] // Arts for slider
 
 const postsCount = 3 // Number of posts in blog 
@@ -18,7 +19,7 @@ const categories = [
     'food',
     'photos',
     'fasion',
-    'cool places'
+    'cool places',
 ] // Existed post categories
 
 const mainCategories = [
@@ -27,7 +28,7 @@ const mainCategories = [
         preview: 'travel.jpg',
     },
     {
-        name: 'cool places',
+        name: 'inspiration',
         preview: 'inspiration.jpg',
     },
     {

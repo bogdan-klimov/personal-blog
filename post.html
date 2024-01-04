@@ -14,13 +14,20 @@
     <link rel="stylesheet" href="./styles/pages/post.css">
 </head>
 <body>
-    <header class="header" name="top">
+    <header class="header">
         <div class="categories_click-field" id="categories_click-field"></div>
         <div class="container">
             <h1 class="page-title" id="page-title"></h1>
             <span class="sub_title" id="sub_title"></span>
             <nav class="nav" id="nav">
-                <div class="search_block icon-search"></div>
+                <div class="icon_search icon-search" id="icon_search"></div>
+                <div class="search_wrapper" id="search_wrapper">
+                    <div class="search_head">
+                        <div class="icon_search icon-search"></div>
+                        <input id="search_input" type="text" class="search_input">
+                    </div>
+                    <ul class="search_block" id="search_block"></ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -32,7 +39,7 @@
                     <img class="active_img" id="active_img" src="" alt="">
                 </div>
             </div>
-            <div class="cover">
+            <div class="cover" id="cover">
                 <span class="cover_title" id="cover_title"></span>
             </div>
             <div class="content">

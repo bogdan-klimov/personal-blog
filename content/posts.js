@@ -1,7 +1,30 @@
 let posts = [
     {
+        title: 'How I was creating this site?',
+        cover: 'site/cover.jpg',
+        preview: 'site/preview.jpg',
+        data: '03.01.2024',
+        category: 'inspiration',
+        author: 'by Bodya',
+        description: 'In this post I describe how I was building this site for posts for over than one month. To be honest I was spending at least 2 or 3 hours a day.',
+        content: [
+            {
+                h1: 'How did it begin?',
+                p: 'In the beggining I was trying to create site with Hugo, but it\'s not really useful due to lack of features and I decided to create my own website.'
+            },
+            {
+                p: 'I started with looking for psd maket in the internet but everything was boring. Finally, after long time of searching I found video where one guy was creating site I really liked. But there was a problem, maket wasn\'t availible so I had to create this site only by video.',
+                image: 'site/site.jpg',
+            },
+            // {
+            //     h2: '',
+
+            // }
+        ]
+    },
+    {
         title: 'First Travel Destinations You Shouldn\'t Miss',
-        cover: '',
+        cover: 'cover.jpg',
         preview: 'post_2.jpg',
         data: '12.12.2021',
         category: 'inspiration',
@@ -528,7 +551,7 @@ let posts = [
         ],
     },
     {
-        title: 'Fourth page',
+        title: 'just random name page',
         cover: '',
         preview: 'post_4.jpg',
         data: '11.12.2021',
