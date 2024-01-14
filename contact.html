@@ -9,9 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500;600&family=PT+Serif&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/fontello.css">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/elements/header.css">
     <link rel="stylesheet" href="./styles/elements/footer.css">
     <link rel="stylesheet" href="./styles/pages/contact.css">
+    <link rel="stylesheet" href="./styles/elements/responsive.css">
 </head>
 <body>
     <header class="header">
@@ -19,14 +21,42 @@
         <div class="container">
             <h1 class="page-title" id="page-title"></h1>
             <span class="sub_title" id="sub_title"></span>
-            <nav class="nav" id="nav">
-                <div class="icon_search icon-search" id="icon_search"></div>
-                <div class="search_wrapper" id="search_wrapper">
-                    <div class="search_head">
-                        <div class="icon_search icon-search"></div>
-                        <input autocomplete="off" id="search_input" type="text" class="search_input">
+            <nav class="nav">
+                <ul class="nav_categories-list" id="nav_categories-list"></ul>
+                <div class="nav_block" id="nav">
+                    <div class="search_container">
+                        <div class="icon_search icon-search" id="icon_search"></div>
+                        <div class="search_wrapper" id="search_wrapper">
+                            <div class="search_head">
+                                <div class="icon_search icon-search"></div>
+                                <input autocomplete="off" id="search_input" type="text" class="search_input">
+                            </div>
+                            <ul class="search_block" id="search_block"></ul>
+                        </div>
                     </div>
-                    <ul class="search_block" id="search_block"></ul>
+                </div>
+                <div class="burger_popup" id="burger_popup">
+                    <div class="burger_button" id="burger_button">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="burger_menu" id="burger_menu">
+                        <div class="container">
+                            <div class="burger_cross" id="burger_cross">
+                                <div class="cross-line"></div>
+                                <div class="cross-line"></div>
+                            </div>
+                            <div class="burger_nav" id="burger_nav"></div>
+                            <div class="search_wrapper-burger" id="search_wrapper-burger">
+                                <div class="search_head">
+                                    <div class="icon_search icon-search"></div>
+                                    <input autocomplete="off" id="search_input-burger" type="text" class="search_input">
+                                </div>
+                                <ul class="search_block" id="search_block-burger"></ul>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -37,13 +67,14 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="copyright">Designed by Stonyart</div>
-        <a href="#top" class="scroll_up">
-            Back to top 
-            <div class="icon-up-big"></div>
-        </a>
+        <div class="container">
+            <div class="copyright">Designed by Stonyart</div>
+            <a href="#top" class="scroll_up">
+                Back to top 
+                <div class="icon-up-big"></div>
+            </a>
+        </div>
     </footer>
-
     <script src="content/configuration.js"></script>
     <script src="content/posts.js"></script>
     <script src="scripts/elements/header.js"></script>

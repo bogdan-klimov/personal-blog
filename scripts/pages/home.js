@@ -1,11 +1,8 @@
 const slider = document.getElementById('slider_list')
 const prevButton = document.getElementById('slider_left-arrow')
 const nextButton = document.getElementById('slider_right-arrow')
-const width = 1280
 let currElem = 0
 let eventEnabled = true
-
-slider.style.left = width * -1 + 'px'
 
 const frontEl = document.createElement('li')
 frontEl.className = 'slider_item'
@@ -17,6 +14,8 @@ const nextEl = document.createElement('li')
 nextEl.className = 'slider_item'
 slider.append(nextEl)
 
+const width = document.getElementsByClassName('slider_item')[0].offsetWidth
+slider.style.left = width * -1 + 'px'
 
 const disableEventForInterval = () => {
     eventEnabled = false
@@ -243,6 +242,7 @@ const sortPosts = (category) => {
         }
         if (sortedPosts.length >= 4) break
     }
+    renderPosts()
 }
 
 for (let i = 0; i < mainCategoriesBlocks.length; i++) {
@@ -252,15 +252,11 @@ for (let i = 0; i < mainCategoriesBlocks.length; i++) {
         }
         mainCategoriesBlocks[i].classList.add('active')
         sortPosts(mainCategoriesBlocks[i].innerText.toLowerCase())
-        renderPosts()
     })
 }
 
 sortPosts(mainCategoriesBlocks[0].innerText.toLowerCase())
-renderPosts()
-
 const sideCategoriesWrapper = document.getElementById('categories_list')
-
 
 const createSideCategory = (name, count) => {
     const category = 
@@ -296,3 +292,106 @@ for (let i = 0; i < gallery.length; i++) {
     galleryWrapper.append(li)
 }
 
+const gallerySlider = document.getElementById('gallery_slider')
+const galleryLeft = document.getElementById('gallery_left-arrow')
+const galleryRight = document.getElementById('gallery_right-arrow')
+let sliderPosition = 0
+let sliderIndex = 0
+
+const renderGallery = (imagesInSlider) => {
+    gallerySlider.innerHTML = ''
+    const imagesWidth = window.innerWidth * (1 / imagesInSlider) 
+    for (let i = 0; i < gallery.length; i++) {
+        const li = document.createElement('li')
+        li.classList.add('gallery_slider-item')
+        li.style.backgroundImage = `url(content/images/gallery/${gallery[i]})`
+        li.style.width = imagesWidth + 'px'
+        gallerySlider.append(li)
+    }
+    galleryLeft.addEventListener('click', () => {
+        if (sliderIndex == 0) {
+            sliderPosition = imagesWidth * (gallery.length-imagesInSlider) * -1
+            sliderIndex = gallery.length - imagesInSlider
+            gallerySlider.style.left = sliderPosition + 'px'
+            return
+        }
+        sliderIndex--
+        sliderPosition += imagesWidth
+        gallerySlider.style.left = sliderPosition + 'px'
+    })
+    galleryRight.addEventListener('click', () => {
+        if (sliderIndex >= gallery.length-imagesInSlider) {
+            sliderPosition = 0
+            sliderIndex = 0
+            gallerySlider.style.left = sliderPosition + 'px'
+            return
+        }
+        sliderIndex++
+        sliderPosition -= imagesWidth
+        gallerySlider.style.left = sliderPosition + 'px'
+    })
+}
+
+if (window.innerWidth < 1240 && window.innerWidth >= 1020) renderGallery(4)
+else if (window.innerWidth < 1020 && window.innerWidth >= 800) renderGallery(3)
+else if (window.innerWidth < 800 && window.innerWidth >= 600) renderGallery(2)
+else if (window.innerWidth < 600) renderGallery(1)
+
+const categoriesElement = document.getElementById('categories_element')
+const categoriesElementButton = document.getElementById('categories_element-wrapper')
+const categoriesElementDropDown = document.getElementById('categories_element-select')
+const clickField = document.getElementById('categories_click-field')
+const categoriesElementArrow = document.getElementById('categories_element-icon-right-open')
+const categoriesElementText = document.getElementById('categories_element-text')
+
+const generateOptions = (category) => {
+    const option = document.createElement('li')
+    option.classList.add('categories_element-option')
+    option.innerText = category
+    categoriesElementDropDown.append(option)
+}
+
+categoriesElementText.innerText = mainCategories[0].name
+categoriesElement.style.backgroundImage = `url(content/images/categories/${mainCategories[0].preview})`
+sortPosts(mainCategories[0].name)
+
+for (let i = 1; i < mainCategories.length; i++) {
+    generateOptions(mainCategories[i].name)
+}
+const categoriesOptions = document.getElementsByClassName('categories_element-option')
+
+const setSelectedCategory = (category) => {
+    categoriesElementText.innerText = category
+    const options = []
+    let currCategory
+    for (let i = 0; i < mainCategories.length; i++) {
+        if (category != mainCategories[i].name) {
+            options.push(mainCategories[i])
+        } else currCategory = mainCategories[i]
+    }
+    for (let i = 0; i < options.length; i++) {
+        categoriesOptions[i].innerText = options[i].name
+        categoriesElement.style.backgroundImage = `url(content/images/categories/${currCategory.preview})`
+    }
+    sortPosts(category)
+}
+
+categoriesElementButton.addEventListener('click', () => {
+    categoriesElementDropDown.style.display = 'block'
+    clickField.classList.add('active')
+    categoriesElementArrow.classList.add('active')
+})
+
+clickField.addEventListener('click', () => {
+    categoriesElementArrow.classList.remove('active')
+    categoriesElementDropDown.style.display = 'none'
+})
+
+for (let i = 0; i < 2; i++) {
+    categoriesOptions[i].addEventListener('click', () => {
+        categoriesElementArrow.classList.remove('active')
+        categoriesElementDropDown.style.display = 'none'
+        clickField.classList.remove('active')
+        setSelectedCategory(categoriesOptions[i].innerText.toLowerCase())
+    })
+}

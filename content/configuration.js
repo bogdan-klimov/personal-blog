@@ -16,9 +16,9 @@ const postsCount = 3 // Number of posts in blog
 const categories = [
     'travel',
     'inspiration',
-    // 'food',
-    // 'photos',
-    // 'fasion',
+    'food',
+    'photos',
+    'fasion',
     'cool places',
 ] // Existed post categories
 
@@ -32,9 +32,9 @@ const mainCategories = [
         preview: 'inspiration.jpg',
     },
     {
-        name: 'lifestyle',
+        name: 'cool places',
         preview: 'life-style.jpg',
-    }
+    },
 ] // 3 categories for main page
 
 const quotesLimit = 3 // More than 4 looks terrible
@@ -63,9 +63,7 @@ const gallery = [
 
 
 
-
 // Contact page:
-
 
 
 

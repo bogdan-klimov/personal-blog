@@ -1,3 +1,19 @@
 html {
     scrollbar-gutter: stable;
 }
+
+.main {
+    height: calc(100vh - 358px);
+}
+
+.about_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about_img {
+    width: 400px;
+    height: calc(100vh - 358px);
+    border: 1px solid black;
+}

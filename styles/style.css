@@ -1,0 +1,19 @@
+html {
+    --main-color: #363535;
+    --gold-color: #cfa46b;
+    --grey-color: #949494;
+    --grey-dark-color: #5e5e5e;
+    --white-color: #fff;
+    --head-font: 'Early-bird', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
+    --josefin-font: 'Josefin Sans', sans-serif;
+    --pacifico-font: 'Pacifico', sans-serif;
+    --serif-font: 'PT Serif', serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}

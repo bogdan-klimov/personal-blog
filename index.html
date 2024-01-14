@@ -9,104 +9,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500;600&family=PT+Serif&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/fontello.css">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/elements/header.css">
     <link rel="stylesheet" href="./styles/elements/footer.css">
     <link rel="stylesheet" href="./styles/pages/home.css">
+    <link rel="stylesheet" href="./styles/elements/responsive.css">
 </head>
 <body>
+    <div class="categories_click-field" id="categories_click-field"></div>
     <header class="header">
-        <div class="categories_click-field" id="categories_click-field"></div>
         <div class="container">
             <h1 class="page-title" id="page-title"></h1>
             <span class="sub_title" id="sub_title"></span>
-            <nav class="nav" id="nav">
-                <div class="icon_search icon-search" id="icon_search"></div>
-                <div class="search_wrapper" id="search_wrapper">
-                    <div class="search_head">
-                        <div class="icon_search icon-search"></div>
-                        <input autocomplete="off" id="search_input" type="text" class="search_input">
+            <nav class="nav">
+                <ul class="nav_categories-list" id="nav_categories-list"></ul>
+                <div class="nav_block" id="nav">
+                    <div class="search_container">
+                        <div class="icon_search icon-search" id="icon_search"></div>
+                        <div class="search_wrapper" id="search_wrapper">
+                            <div class="search_head">
+                                <div class="icon_search icon-search"></div>
+                                <input autocomplete="off" id="search_input" type="text" class="search_input">
+                            </div>
+                            <ul class="search_block" id="search_block"></ul>
+                        </div>
                     </div>
-                    <ul class="search_block" id="search_block"></ul>
+                </div>
+                <div class="burger_popup" id="burger_popup">
+                    <div class="burger_button" id="burger_button">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="burger_menu" id="burger_menu">
+                        <div class="container">
+                            <div class="burger_cross" id="burger_cross">
+                                <div class="cross-line"></div>
+                                <div class="cross-line"></div>
+                            </div>
+                            <div class="search_wrapper-burger" id="search_wrapper-burger">
+                                <div class="search_head">
+                                    <div class="icon_search icon-search"></div>
+                                    <input autocomplete="off" id="search_input-burger" type="text" class="search_input">
+                                </div>
+                                <ul class="search_block" id="search_block-burger"></ul>
+                            </div> 
+                            <div class="burger_nav" id="burger_nav"></div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main class="main">
+        <div id="slider_left-arrow" class="slider_left-arrow icon-left-open"></div>
+        <div id="slider_right-arrow" class="slider_right-arrow icon-right-open"></div>
         <div class="container">
             <div class="slider">
                 <div class="slider_wrapper">
                     <div class="slider_blur"></div>
                     <div class="slider_blur"></div>
-                    <div id="slider_left-arrow" class="slider_left-arrow icon-left-open"></div>
-                    <div id="slider_right-arrow" class="slider_right-arrow icon-right-open"></div>
                     <div class="slider_block-wrapper" id="slider_block-wrapper"></div>
                     <ul class="slider_list" id="slider_list"></ul>
                 </div>
             </div>
             <ul class="categories_wrapper" id="categories_wrapper"></ul>
+            <div class="categories_element" id="categories_element">
+                <div class="categories_element-wrapper" id="categories_element-wrapper">
+                    <span class="categories_element-text" id="categories_element-text"></span>
+                    <div class="icon-right-open categories_element-icon-right-open" id="categories_element-icon-right-open"></div>
+                </div>
+                <ul class="categories_element-select" id="categories_element-select"></ul>
+            </div>
             <div class="content_wrapper">
                 <ul class="posts" id="posts"></ul>
                 <div class="side_block">
-                    <div class="side_item">
-                        <h2 class="side_title">
-                            about
-                        </h2>
-                        <div class="side_about-image"></div>
-                        <p class="side_about-text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Morbi vitae ultrices augue. 
-                            In hac habitasse platea 
-                            dictumst. Suspendisse finibus 
-                            augue nec mi luctus, ac 
-                            bibendum diam iaculis. 
-                            Maecenas vitae nisl ex.
-                        </p>
-                    </div>
-                    <div class="side_item">
-                        <h2 class="side_title">Social</h2>
-                        <ul class="social_list">
-                            <li class="social_list-item">
-                                <a class="icon-twitter" href="#"></a>
-                            </li>
-                            <li class="social_list-item">
-                                <a class="icon-instagram" href="#"></a>
-                            </li>
-                            <li class="social_list-item">
-                                <a class="icon-linkedin" href="#"></a>
-                            </li>
-                            <li  class="social_list-item">
-                                <a class="icon-facebook" href="#"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="side_item">
-                        <h2 class="side_title">Categories</h2>
-                        <ul class="categories_list" id="categories_list"></ul>
-                    </div>
-                    <div class="side_item" id="side_item-quote">
-                        <h2 class="side_title">
-                            Quotes
-                        </h2>
-                        <div class="side_quote-icon icon-quote-left"></div>
-                        <div class="quote_wrapper">
-                            <ul class="quote_list" id="quote_list"></ul>
+                    <div class="side_left">
+                        <div class="side_item side_item-about">
+                            <h2 class="side_title">about</h2>
+                            <div class="side_wrapper">
+                                <div class="side_about-image"></div>
+                                <p class="side_about-text">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. 
+                                    Morbi vitae ultrices augue. 
+                                    In hac habitasse platea 
+                                    dictumst. Suspendisse finibus 
+                                    augue nec mi luctus, ac 
+                                    bibendum diam iaculis. 
+                                    Maecenas vitae nisl ex.
+                                </p>
+                            </div>
                         </div>
-                        <div class="side_quote-icon icon-quote-right"></div>
-                        <ul class="side_quote-list" id="side_quote-list"></ul>
+                        <div class="side_item">
+                            <h2 class="side_title">Social</h2>
+                            <ul class="social_list">
+                                <li class="social_list-item">
+                                    <a class="icon-twitter" href="#"></a>
+                                </li>
+                                <li class="social_list-item">
+                                    <a class="icon-instagram" href="#"></a>
+                                </li>
+                                <li class="social_list-item">
+                                    <a class="icon-linkedin" href="#"></a>
+                                </li>
+                                <li  class="social_list-item">
+                                    <a class="icon-facebook" href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="side_right">
+                        <div class="side_item">
+                            <h2 class="side_title">Categories</h2>
+                            <ul class="categories_list" id="categories_list"></ul>
+                        </div>
+                        <div class="side_item" id="side_item-quote">
+                            <h2 class="side_title">Quotes</h2>
+                            <div class="side_quote-icon icon-quote-left"></div>
+                            <div class="quote_wrapper">
+                                <ul class="quote_list" id="quote_list"></ul>
+                            </div>
+                            <div class="side_quote-icon icon-quote-right"></div>
+                            <ul class="side_quote-list" id="side_quote-list"></ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <h2 class="gallery_title">Gallery</h2>
         <ul class="gallery" id="gallery"></ul>
+        <div class="gallery_slider-wrapper">
+            <div class="slider_left-arrow icon-left-open" id="gallery_left-arrow"></div>
+            <div class="slider_right-arrow icon-right-open" id="gallery_right-arrow"></div>
+            <ul class="gallery_slider" id="gallery_slider"></ul>
+        </div>
     </main>
     <footer class="footer">
-        <div class="copyright">Designed by Stonyart</div>
-        <a href="#top" class="scroll_up">
-            Back to top 
-            <div class="icon-up-big"></div>
-        </a>
+        <div class="container">
+            <div class="copyright">Designed by Stonyart</div>
+            <a href="#top" class="scroll_up">
+                Back to top 
+                <div class="icon-up-big"></div>
+            </a>
+        </div>
     </footer>
     <script src="content/posts.js"></script>
     <script src="content/configuration.js"></script>

@@ -1,3 +1,8 @@
 html {
     scrollbar-gutter: stable;
 }
+
+.main {
+    height: calc(100vh - 358px);
+}
+

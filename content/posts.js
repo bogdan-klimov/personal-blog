@@ -1,6 +1,6 @@
 let posts = [
     {
-        title: 'How I was creating this site?',
+        title: 'How I was creating this site am i good?',
         cover: 'site/cover.jpg',
         preview: 'site/preview.jpg',
         data: '03.01.2024',

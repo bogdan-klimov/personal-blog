@@ -5,17 +5,18 @@ titleBlock.innerHTML = title
 subTitleBlock.innerHTML = subTitle
 
 const navWrapper = document.getElementById('nav')
-const initSiteNavigation = () => {
+const navBurger = document.getElementById('burger_nav')
+
+const initSiteNavigation = (parent) => {
     const nav = 
     `
     <ul class="nav_list">
         <li class="nav_item">
             <a href="${url}">home</a>
         </li>
-        <li class="nav_item" id="categories_link">
+        <li class="nav_item categories_link">
             categories
-            <div class="icon-right-open" id="categories_icon-right-open"></div>
-            <ul class="nav_categories-list" id="nav_categories-list"></ul>
+            <div class="icon-right-open categories_icon-right-open"></div>
         </li>
         <li class="nav_item">
             <a href="${url}/blog.html">blog</a>
@@ -28,26 +29,31 @@ const initSiteNavigation = () => {
         </li>
     </ul>
     `
-    navWrapper.insertAdjacentHTML('afterbegin', nav)
+    parent.insertAdjacentHTML('afterbegin', nav)
 }
 
-initSiteNavigation()
+initSiteNavigation(navWrapper)
+initSiteNavigation(navBurger)
 
-const categoriesLink = document.getElementById('categories_link')
+const categoriesLink = document.getElementsByClassName('categories_link')
 const categoriesNav = document.getElementById('nav_categories-list')
-const categoriesNavArrow = document.getElementById('categories_icon-right-open')
+const categoriesNavArrow = document.getElementsByClassName('categories_icon-right-open')
 const categoriesField = document.getElementById('categories_click-field')
 
-categoriesLink.addEventListener('click', () => {
-    categoriesNav.classList.toggle('active')
-    categoriesNavArrow.classList.toggle('active')
-    categoriesField.classList.add('active')
-})
+for (let i = 0; i < categoriesLink.length; i++) {
+    categoriesLink[i].addEventListener('click', () => {
+        categoriesNav.classList.add('active')
+        categoriesNavArrow[i].classList.add('active')
+        categoriesField.classList.add('active')
+    })
+}
 
 categoriesField.addEventListener('click', () => {
-    categoriesField.classList.remove('active')
+    for (let i = 0; i < categoriesNavArrow.length; i++) {
+        categoriesNavArrow[i].classList.remove('active')
+    }
     categoriesNav.classList.remove('active')
-    categoriesNavArrow.classList.remove('active')
+    categoriesField.classList.remove('active')
     searchBlock.innerHTML = ''
     searchBlock.classList.remove('active')
 })
@@ -66,7 +72,12 @@ for (let i = 0; i < categories.length; i++) {
 
 const searchIcon = document.getElementById('icon_search')
 const searchWrapper = document.getElementById('search_wrapper')
+const searchWrapperBurger = document.getElementById('search_wrapper-burger')
 const searchInput = document.getElementById('search_input')
+const searchInputBurger = document.getElementById('search_input-burger')
+const searchBlock = document.getElementById('search_block')
+const searchBlockBurger = document.getElementById('search_block-burger')
+
 
 searchIcon.addEventListener('click', () => {
     searchWrapper.classList.add('active')
@@ -78,9 +89,10 @@ categoriesField.addEventListener('click', () => {
     searchWrapper.classList.remove('active')
     searchBlock.innerHTML = ''
     searchInput.value = ''
+    searchWrapperBurger.classList.remove('active')
+    searchBlockBurger.innerHTML = ''
+    searchInputBurger.value = ''
 })
-
-const searchBlock = document.getElementById('search_block')
 
 const createSearchItem = (id, category, author, data, title) => {
     const li = 
@@ -99,8 +111,8 @@ const createSearchItem = (id, category, author, data, title) => {
     </li>
     `
     searchBlock.insertAdjacentHTML('beforeend', li)
+    searchBlockBurger.insertAdjacentHTML('beforeend', li)
 }
-
 
 const maxSearchItems = 4
 let searchSortedPosts = posts
@@ -117,19 +129,19 @@ const renderSearchItems = () => {
     }
 }
 
-searchInput.addEventListener('input', () => {
-    searchBlock.innerHTML = ''
-    searchBlock.classList.remove('active')
-    if (searchInput.value != '') {
+const searchInit = (block, input) => {
+    block.innerHTML = ''
+    block.classList.remove('active')
+    if (input.value != '') {
         searchSortedPosts = []
         for (let i = 0; i < posts.length; i++) {
-            if (posts[i].title.toLowerCase().trim().startsWith(searchInput.value.toLowerCase().trim())) {
+            if (posts[i].title.toLowerCase().trim().startsWith(input.value.toLowerCase().trim())) {
                 searchSortedPosts.push(posts[i])
             }
         }
         if (searchSortedPosts.length < 4) {
             for (let i = 0; i < posts.length; i++) {
-                if (posts[i].category.toLowerCase().trim().includes(searchInput.value.toLowerCase().trim()) 
+                if (posts[i].category.toLowerCase().trim().includes(input.value.toLowerCase().trim()) 
                 && !searchSortedPosts.includes(posts[i])) {
                     searchSortedPosts.push(posts[i])
                 } 
@@ -137,10 +149,28 @@ searchInput.addEventListener('input', () => {
             }
         }
         if (searchSortedPosts.length == 0) {
-            searchBlock.innerText = 'No results found'
-            searchBlock.classList.add('active')
+            block.innerText = 'No results found'
+            block.classList.add('active')
         }
         renderSearchItems()
-    } 
+    }
+}
+
+searchInput.addEventListener('input', searchInit.bind(null, searchBlock, searchInput))
+searchInputBurger.addEventListener('input', 
+searchInit.bind(null, searchBlockBurger, searchInputBurger))
+
+const burger = document.getElementById('burger_button')
+const burgerMenu = document.getElementById('burger_menu')
+const burgerCross = document.getElementById('burger_cross')
+
+burger.addEventListener('click', () => {
+    burgerMenu.style.display = 'block'
+    document.documentElement.style.overflowY = 'hidden'
+    searchInputBurger.focus()
 })
 
+burgerCross.addEventListener('click', () => {
+    burgerMenu.style.display = 'none'
+    document.documentElement.style.overflowY = 'auto'
+})
