@@ -58,6 +58,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
 }
 
 .nav_list {
@@ -105,8 +106,8 @@
     background-color: white;
     padding: 15px 0;
     text-align: center;
-    top: 50px;
     left: 102px;
+    top: 50px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
@@ -159,22 +160,6 @@
 
 #categories_link .icon-right-open {
     margin-left: 15px;
-    display: block;
-}
-
-.categories_click-field {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background-color: aliceblue;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    display: none;
-}
-
-.categories_click-field.active {
     display: block;
 }
 
@@ -366,6 +351,7 @@
 
 .burger_nav {
     margin-top: 25px;
+    position: relative;
 }
 
 .burger_cross:hover {
@@ -408,4 +394,5 @@
     position: absolute;
     top: 42px;
     left: -1px;
+    z-index: 10;
 }

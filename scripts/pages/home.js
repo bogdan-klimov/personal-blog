@@ -1,8 +1,8 @@
 const slider = document.getElementById('slider_list')
 const prevButton = document.getElementById('slider_left-arrow')
 const nextButton = document.getElementById('slider_right-arrow')
-let currElem = 0
 let eventEnabled = true
+let currElem = 0
 
 const frontEl = document.createElement('li')
 frontEl.className = 'slider_item'
@@ -340,7 +340,7 @@ else if (window.innerWidth < 600) renderGallery(1)
 const categoriesElement = document.getElementById('categories_element')
 const categoriesElementButton = document.getElementById('categories_element-wrapper')
 const categoriesElementDropDown = document.getElementById('categories_element-select')
-const clickField = document.getElementById('categories_click-field')
+const clickField = clickFields[0]
 const categoriesElementArrow = document.getElementById('categories_element-icon-right-open')
 const categoriesElementText = document.getElementById('categories_element-text')
 
@@ -358,6 +358,7 @@ sortPosts(mainCategories[0].name)
 for (let i = 1; i < mainCategories.length; i++) {
     generateOptions(mainCategories[i].name)
 }
+
 const categoriesOptions = document.getElementsByClassName('categories_element-option')
 
 const setSelectedCategory = (category) => {

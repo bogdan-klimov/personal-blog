@@ -36,39 +36,47 @@ initSiteNavigation(navWrapper)
 initSiteNavigation(navBurger)
 
 const categoriesLink = document.getElementsByClassName('categories_link')
-const categoriesNav = document.getElementById('nav_categories-list')
+const categoriesNav = document.getElementsByClassName('nav_categories-list')
 const categoriesNavArrow = document.getElementsByClassName('categories_icon-right-open')
-const categoriesField = document.getElementById('categories_click-field')
+const clickFields = document.getElementsByClassName('click-field')
 
 for (let i = 0; i < categoriesLink.length; i++) {
     categoriesLink[i].addEventListener('click', () => {
-        categoriesNav.classList.add('active')
+        categoriesNav[i].classList.add('active')
         categoriesNavArrow[i].classList.add('active')
-        categoriesField.classList.add('active')
+        clickFields[i].classList.add('active')
     })
 }
 
-categoriesField.addEventListener('click', () => {
-    for (let i = 0; i < categoriesNavArrow.length; i++) {
-        categoriesNavArrow[i].classList.remove('active')
-    }
-    categoriesNav.classList.remove('active')
-    categoriesField.classList.remove('active')
-    searchBlock.innerHTML = ''
-    searchBlock.classList.remove('active')
-})
-
-for (let i = 0; i < categories.length; i++) {
-    const li = 
-    `
-    <li class="categories_item">
-        <a class="categories_item-link" href="${url}/blog.html?category=${categories[i]}">
-            ${categories[i]}
-        </a>
-    </li>
-    `
-    categoriesNav.insertAdjacentHTML('beforeend', li)
+for (let i = 0; i < 2; i++) {
+    clickFields[i].addEventListener('click', () => {
+        for (let i = 0; i < categoriesNavArrow.length; i++) {
+            categoriesNavArrow[i].classList.remove('active')
+        }
+        for (let i = 0; i < categoriesNav.length; i++) {
+            categoriesNav[i].classList.remove('active')
+        }
+        clickFields[i].classList.remove('active')
+        searchBlock.innerHTML = ''
+        searchBlock.classList.remove('active')
+    })
 }
+
+
+for (let j = 0; j < categoriesNav.length; j++) {
+    for (let i = 0; i < categories.length; i++) {
+        const li = 
+        `
+        <li class="categories_item">
+            <a class="categories_item-link" href="${url}/blog.html?category=${categories[i]}">
+                ${categories[i]}
+            </a>
+        </li>
+        `
+        categoriesNav[j].insertAdjacentHTML('beforeend', li)
+    }
+}
+
 
 const searchIcon = document.getElementById('icon_search')
 const searchWrapper = document.getElementById('search_wrapper')
@@ -81,18 +89,21 @@ const searchBlockBurger = document.getElementById('search_block-burger')
 
 searchIcon.addEventListener('click', () => {
     searchWrapper.classList.add('active')
-    categoriesField.classList.add('active')
+    clickFields[0].classList.add('active')
     searchInput.focus()
 })
 
-categoriesField.addEventListener('click', () => {
-    searchWrapper.classList.remove('active')
-    searchBlock.innerHTML = ''
-    searchInput.value = ''
-    searchWrapperBurger.classList.remove('active')
-    searchBlockBurger.innerHTML = ''
-    searchInputBurger.value = ''
-})
+for (let i = 0; i < 2; i++) {
+    clickFields[i].addEventListener('click', () => {
+        searchWrapper.classList.remove('active')
+        searchBlock.innerHTML = ''
+        searchInput.value = ''
+        searchWrapperBurger.classList.remove('active')
+        searchBlockBurger.innerHTML = ''
+        searchInputBurger.value = ''
+    })
+}
+
 
 const createSearchItem = (id, category, author, data, title) => {
     const li = 

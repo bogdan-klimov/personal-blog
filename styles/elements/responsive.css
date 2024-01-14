@@ -202,7 +202,6 @@
     }
     .nav_categories-list {
         left: 120px;
-        top: 57px;
     }
 }
 
@@ -251,7 +250,6 @@
     }
     .nav_categories-list {
         left: 102px;
-        top: 57px;
     }
 }
 
@@ -298,12 +296,10 @@
         text-align: center;
         margin: 0 auto;
     }
-    .nav_item:nth-child(2) {
-        margin-right: -30px;
-    }
     .nav_categories-list {
-        left: 152px;
-        top: 107px;
+        top: 117px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
     .post {
         margin-top: 30px;
@@ -322,6 +318,9 @@
         font-size: 1.3rem;
         margin-top: 15px;
     }
+    .nav_list {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -330,6 +329,10 @@
     }
     .slider_item {
         max-width: 460px;
+        max-height: 220px;
+    }
+    .slider_wrapper {
+        max-height: 220px;
     }
     .search_wrapper {
         width: 460px;
@@ -341,8 +344,21 @@
     #slider_right-arrow {
         display: none;
     }
-    .nav_categories-list {
-        left: 135px;
+    .slider_block {
+        padding: 0 12px;
+        max-width: 350px;
+        max-height: 160px;
+    }
+    .slider_block-head {
+        margin-top: 20px;
+    }
+    .slider_block-text {
+        font-size: 1.2rem;
+    }
+    .slider_block-read {
+        font-size: .7rem;
+        max-width: 140px;
+        margin-top: 10px;
     }
 }
 
@@ -356,8 +372,62 @@
     .search_wrapper {
         width: 420px;
     }
+    .slider_block {
+        max-width: 360px;
+    }
+    .post_text {
+        max-width: 440px;
+    }
+    .post_img {
+        margin-right: 10px;
+    }
 }
 
 @media (max-width: 480px) {
-    
+    .container {
+        max-width: 380px;
+    }
+    .slider_item {
+        max-width: 380px;
+    }
+    .search_wrapper {
+        width: 380px;
+    }
+    .slider_block {
+        width: 320px;
+    }
+    .post_text {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        max-width: 340px;
+    }
+    .slider_item {
+        max-width: 340px;
+    }
+    .search_wrapper {
+        width: 340px;
+    }
+    .slider_block {
+        max-width: 316px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        max-width: 320px;
+    }
+    .slider_item {
+        max-width: 320px;
+    }
+    .search_wrapper {
+        width: 320px;
+    }
+}
+
+@media (max-width: 360px) {
+
 }
