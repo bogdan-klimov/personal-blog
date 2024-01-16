@@ -11,11 +11,11 @@ const leftNavigationButton = document.getElementsByClassName('navigation_button'
 const rightNavigationButton = document.getElementsByClassName('navigation_button')[1]
 
 const switchPostLeft = () => {
-    window.location.href = `${url}/post.html?id=${Number(linkParam)-1}`;
+    window.location.href = `post.html?id=${Number(linkParam)-1}`;
 }
 
 const switchPostRight = () => {
-    window.location.href = `${url}/post.html?id=${Number(linkParam)+1}`;
+    window.location.href = `post.html?id=${Number(linkParam)+1}`;
 }
 
 const initNavButtons = () => {

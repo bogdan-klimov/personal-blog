@@ -11,7 +11,7 @@ const createPost = (wrapper, category, author, title, description, data, preview
             </span>
             <h2 class="post_head">${title}</h2>
             <p class="post_text">${description}</p>
-            <a class="post_read-more" href="${url}/post.html?id=${id}">Read more</a>
+            <a class="post_read-more" href="post.html?id=${id}">Read more</a>
         </div>
     </li>`
     wrapper.insertAdjacentHTML('beforeend', post)
@@ -23,7 +23,7 @@ let sortedPosts = posts
 const createCategory = (name, count) => {
     const li = 
     `
-    <a class="posts_sort-item" href="${url}/blog.html?category=${name}">
+    <a class="posts_sort-item" href="blog.html?category=${name}">
         ${name}    
         <span class="posts_sort-count">
             ${count}

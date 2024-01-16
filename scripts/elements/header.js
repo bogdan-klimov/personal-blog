@@ -60,7 +60,7 @@ for (let j = 0; j < categoriesNav.length; j++) {
         const li = 
         `
         <li class="categories_item">
-            <a class="categories_item-link" href="${url}/blog.html?category=${categories[i]}">
+            <a class="categories_item-link" href="blog.html?category=${categories[i]}">
                 ${categories[i]}
             </a>
         </li>
@@ -100,7 +100,7 @@ const createSearchItem = (id, category, author, data, title) => {
     const li = 
     `
     <li class="search_item">
-        <a href="${url}/post.html?id=${id}">
+        <a href="post.html?id=${id}">
             <div class="search_header">
                 <div class="search_header-wrapper">
                     <div class="search_category">${category}</div>
