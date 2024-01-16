@@ -12,20 +12,20 @@ const initSiteNavigation = (parent) => {
     `
     <ul class="nav_list">
         <li class="nav_item">
-            <a href="${url}">home</a>
+            <a href="index.html">home</a>
         </li>
         <li class="nav_item categories_link">
             categories
             <div class="icon-right-open categories_icon-right-open"></div>
         </li>
         <li class="nav_item">
-            <a href="${url}/blog.html">blog</a>
+            <a href="blog.html">blog</a>
         </li>
         <li class="nav_item">
-            <a href="${url}/about.html">about</a>
+            <a href="about.html">about</a>
         </li>
         <li class="nav_item">
-            <a href="${url}/contact.html">contact</a>
+            <a href="contact.html">contact</a>
         </li>
     </ul>
     `
