@@ -11,22 +11,14 @@ const initSiteNavigation = (parent) => {
     const nav = 
     `
     <ul class="nav_list">
-        <li class="nav_item">
-            <a href="index.html">home</a>
-        </li>
+        <li class="nav_item"><a href="index.html">home</a></li>
         <li class="nav_item categories_link">
             categories
             <div class="icon-right-open categories_icon-right-open"></div>
         </li>
-        <li class="nav_item">
-            <a href="blog.html">blog</a>
-        </li>
-        <li class="nav_item">
-            <a href="about.html">about</a>
-        </li>
-        <li class="nav_item">
-            <a href="contact.html">contact</a>
-        </li>
+        <li class="nav_item"><a href="blog.html">blog</a></li>
+        <li class="nav_item"><a href="about.html">about</a></li>
+        <li class="nav_item"><a href="contact.html">contact</a></li>
     </ul>
     `
     parent.insertAdjacentHTML('afterbegin', nav)
@@ -104,7 +96,6 @@ for (let i = 0; i < 2; i++) {
     })
 }
 
-
 const createSearchItem = (id, category, author, data, title) => {
     const li = 
     `
@@ -178,7 +169,6 @@ const burgerCross = document.getElementById('burger_cross')
 burger.addEventListener('click', () => {
     burgerMenu.style.display = 'block'
     document.documentElement.style.overflowY = 'hidden'
-    // searchInputBurger.focus()
 })
 
 burgerCross.addEventListener('click', () => {

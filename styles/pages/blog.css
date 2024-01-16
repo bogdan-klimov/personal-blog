@@ -19,7 +19,7 @@ html {
     justify-content: center;
     user-select: none;
     cursor: pointer;
-    transition: .5s;
+    transition: .1s;
 }
 
 .posts_sort-item:hover {
