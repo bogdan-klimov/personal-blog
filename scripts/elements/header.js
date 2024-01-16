@@ -178,7 +178,7 @@ const burgerCross = document.getElementById('burger_cross')
 burger.addEventListener('click', () => {
     burgerMenu.style.display = 'block'
     document.documentElement.style.overflowY = 'hidden'
-    searchInputBurger.focus()
+    // searchInputBurger.focus()
 })
 
 burgerCross.addEventListener('click', () => {

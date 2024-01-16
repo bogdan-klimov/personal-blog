@@ -1,5 +1,5 @@
-const url = 'https://bogdan-klimov.github.io/personal-blog' // For github
-// const url = 'http://localhost:5500' // For local host
+// const url = 'https://bogdan-klimov.github.io/personal-blog' // For github
+const url = 'http://localhost:5500' // For local host
 
 const icon = ''
 const title = 'Life Style Blog'
@@ -13,7 +13,8 @@ const arts = [
     // 'white_black.jpg',
 ] // Arts for slider
 
-const postsCount = 3 // Number of posts in blog 
+const sortedPostsCount = 5 // Max number of posts in main page
+const postsCount = 3 // Number of posts in blog page
 const categories = [
     'travel',
     'inspiration',

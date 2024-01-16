@@ -176,9 +176,12 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                 </span>
                 <h2 class="post_head">${title}</h2>
                 <p class="post_text">${description}</p>
-                <a class="post_read-more" href="${url}/post.html?id=${id}">
+                <a class="post_read-more" href="post.html?id=${id}">
                     Read more
                     <div class="post_read-more_line"></div>
+                </a>
+                <a class="slider_block-read post_block-read" href="post.html?id=${id}">
+                    Read more
                 </a>
             </div>
         </li>
@@ -194,9 +197,12 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                 </span>
                 <h2 class="post_head">${title}</h2>
                 <p class="post_text">${description}</p>
-                <a class="post_read-more" href="${url}/post.html?id=${id}">
+                <a class="post_read-more" href="post.html?id=${id}">
                     Read more
                     <div class="post_read-more_line"></div>
+                </a>
+                <a class="slider_block-read post_block-read" href="post.html?id=${id}">
+                    Read more
                 </a>
             </div>
             <div class="post_img" style="background-image: url(content/images/posts/${preview})">
@@ -215,8 +221,8 @@ let sortedPosts = posts
 
 const renderPosts = () => {
     postsWrapper.innerHTML = ''
-    let borders = 4
-    if (sortedPosts.length < borders) borders = sortedPosts.length
+    let borders = sortedPostsCount
+    if (sortedPosts.length < sortedPostsCount) borders = sortedPosts.length 
     for (let i = 0; i < borders; i++) {
         createPost(
             sortedPosts[i].data,
@@ -240,7 +246,7 @@ const sortPosts = (category) => {
         if (posts[i].category == category) {
             sortedPosts.push(posts[i])
         }
-        if (sortedPosts.length >= 4) break
+        if (sortedPosts.length >= sortedPostsCount) break
     }
     renderPosts()
 }

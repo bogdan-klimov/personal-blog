@@ -671,3 +671,8 @@
 .click-field.active {
     display: block;
 }
+
+.post_block-read {
+    display: none;
+    margin: 0;
+}
