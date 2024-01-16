@@ -234,7 +234,7 @@
         top: 147.5px;
     }
     .post_img {
-        height: 240px;
+        max-height: 240px;
     }
     .post_head {
         font-size: 1rem;
@@ -282,7 +282,8 @@
         display: block;
     }
     .post_img {
-        height: 170px;
+        /* max-height: 200px; */
+        height: auto;
     }
     .post_text {
         height: 45px;
@@ -338,7 +339,7 @@
         margin-bottom: 10px;
         max-width: 100%;
     }
-}
+} 
 
 @media (max-width: 600px) {
     .container {

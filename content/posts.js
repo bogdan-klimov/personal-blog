@@ -56,7 +56,7 @@ let posts = [
         ],
     },
     {
-        title: 'Travel  You Shouldn\'t hello t1',
+        title: 'Travel  You Shouldn\'t hello',
         cover: '',
         preview: 'post_1.jpg',
         data: '21.12.2006',

@@ -180,9 +180,11 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                     Read more
                     <div class="post_read-more_line"></div>
                 </a>
-                <a class="slider_block-read post_block-read" href="post.html?id=${id}">
-                    Read more
-                </a>
+                <div class="block-read_wrapper">
+                    <a class="slider_block-read post_block-read" href="post.html?id=${id}">
+                        Read more
+                    </a>
+                </div>
             </div>
         </li>
         `
@@ -201,9 +203,11 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                     Read more
                     <div class="post_read-more_line"></div>
                 </a>
-                <a class="slider_block-read post_block-read" href="post.html?id=${id}">
-                    Read more
-                </a>
+                <div class="block-read_wrapper">
+                    <a class="slider_block-read post_block-read" href="post.html?id=${id}">
+                        Read more
+                    </a>
+                </div>
             </div>
             <div class="post_img" style="background-image: url(content/images/posts/${preview})">
                 <div class="post_data">

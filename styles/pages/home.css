@@ -656,7 +656,20 @@
     transform: rotate(90deg);
 }
 
+.block-read_wrapper {
+    display: flex;
+    height: 85px;
+    align-items: center;
+}
+
+.post_reversed .block-read_wrapper {
+    justify-content: end;
+}
+
 .post_block-read {
     display: none;
-    margin: 0;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    width: 300px;
+    max-height: 39px;
 }
