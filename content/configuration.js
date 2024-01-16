@@ -10,7 +10,7 @@ const arts = [
     // 'white_black.jpg',
 ] // Arts for slider
 
-const sortedPostsCount = 5 // Max number of posts in main page
+const sortedPostsCount = 4 // Max number of posts in main page
 const postsCount = 3 // Number of posts in blog page
 const categories = [
     'travel',
