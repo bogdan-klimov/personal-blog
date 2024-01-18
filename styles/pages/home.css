@@ -585,6 +585,7 @@
     background-image: url(./../../content/images/categories/travel.jpg);
     margin-top: 55px;
     display: none;
+    user-select: none;
 }
 
 .categories_element-wrapper {
