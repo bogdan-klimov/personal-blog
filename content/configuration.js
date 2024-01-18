@@ -2,6 +2,7 @@ const icon = ''
 const title = 'Life Style Blog'
 const subTitle = 'a theme for all life style and travel bloggers!'
 
+const blockOpacity = 0.88 // From 0 to 1
 const sliderTime = 5 // Time of slider interval in seconds
 const arts = [
     'mountains.jpg',

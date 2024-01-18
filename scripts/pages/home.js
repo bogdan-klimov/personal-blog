@@ -118,6 +118,7 @@ const renderSliderBlock = (id) => {
     const sliderBlock = 
     `
         <div class="slider_block">
+            <div class="slider_block-bg" style="opacity: ${blockOpacity}"></div>
             <span class="slider_block-head">
                 ${posts[id].category}
             </span>
