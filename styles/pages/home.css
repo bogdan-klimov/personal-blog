@@ -38,6 +38,8 @@
     background-color: var(--white-color);
     top: 50%;
     left: 50%;
+    display: flex;
+    flex-direction: column;
     transform: translate(-50%, -50%);
 }
 
@@ -69,11 +71,12 @@
     padding: 15px 0;
     border: 2px solid var(--gold-color);
     max-width: 200px;
+    width: 100%;
     text-align: center;
     text-transform: uppercase;
     font-family: var(--main-font);
     font-weight: 500;
-    margin: 25px auto;
+    margin: auto;
     transition: .3s;
     user-select: none;
 }

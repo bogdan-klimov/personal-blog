@@ -8,6 +8,7 @@ html {
     text-transform: uppercase;
     margin-top: 55px;
     width: 100%;
+    /* flex-wrap: wrap; */
 }
 
 .posts_sort-item {
@@ -20,6 +21,7 @@ html {
     user-select: none;
     cursor: pointer;
     transition: .1s;
+    /* padding: 15px 50px; */
 }
 
 .posts_sort-item:hover {

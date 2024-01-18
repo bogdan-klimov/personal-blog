@@ -164,9 +164,6 @@
         max-width: 530px;
         height: 220px;
     }
-    .slider_block-read {
-        margin-top: 15px;
-    }
     .slider_block-text {
         margin-top: 25px;
     }
@@ -372,7 +369,6 @@
     .slider_block-read {
         font-size: .7rem;
         max-width: 140px;
-        margin-top: 10px;
     }
 }
 
