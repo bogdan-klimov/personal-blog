@@ -16,20 +16,16 @@ let posts = [
                 p: 'I started with looking for psd maket in the internet but everything was boring. Finally, after long time of searching I found video where one guy was creating site I really liked. But there was a problem, maket wasn\'t availible so I had to create this site only by video.',
                 image: 'site/site.jpg',
             },
-            // {
-            //     h2: '',
-
-            // }
         ]
     },
     {
-        title: 'First Travel Destinations You Shouldn\'t Miss',
+        title: 'First Travel Destinations',
         cover: 'cover.jpg',
         preview: 'post_2.jpg',
         data: '12.12.2021',
         category: 'inspiration',
         author: 'bodya',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
         content: [
             {
                 h1: 'How we did it? 1',

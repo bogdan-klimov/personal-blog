@@ -1,7 +1,7 @@
 const createPost = (wrapper, category, author, title, description, data, preview, id) => {
     const post = 
     `<li class="post">
-        <div class="post_img" id="post_img" style="background-image: url(content/images/posts/${preview})">
+        <div class="post_img post_img-blog" style="background-image: url(content/images/posts/${preview})">
             <div class="post_data">${data}</div>
         </div>
         <div class="post_content">
@@ -11,11 +11,12 @@ const createPost = (wrapper, category, author, title, description, data, preview
             </span>
             <h2 class="post_head">${title}</h2>
             <p class="post_text">${description}</p>
-            <a class="post_read-more" href="post.html?id=${id}">Read more</a>
+            <a class="post_read-more-btn blog" href="post.html?id=${id}">Read more</a>
         </div>
     </li>`
     wrapper.insertAdjacentHTML('beforeend', post)
 }
+
 
 const categoriesWrapper = document.getElementById('categories')
 let sortedPosts = posts
@@ -25,9 +26,7 @@ const createCategory = (name, count) => {
     `
     <a class="posts_sort-item" href="blog.html?category=${name}">
         ${name}    
-        <span class="posts_sort-count">
-            ${count}
-        </span>
+        <span class="posts_sort-count">${count}</span>
     </a>
     `
     categoriesWrapper.insertAdjacentHTML('beforeend', li)
@@ -290,3 +289,11 @@ for (let i = 0; i < categoriesButtons.length; i++) {
 const urlParams = new URLSearchParams(window.location.search);
 const linkParam = urlParams.get('category');
 if (linkParam) sortCategories(linkParam) 
+
+
+const container = document.querySelector('.container')
+let categoriesBlocksVisible = categories.length + 1
+
+for (let i = 0; i < categoriesBlocksVisible; i++) {
+    categoriesButtons[i].style.maxWidth = container.offsetWidth / categoriesBlocksVisible -32 + 'px'
+}

@@ -182,9 +182,7 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                     <div class="post_read-more_line"></div>
                 </a>
                 <div class="block-read_wrapper">
-                    <a class="slider_block-read post_block-read" href="post.html?id=${id}">
-                        Read more
-                    </a>
+                    <a class="post_read-more-btn" href="post.html?id=${id}">Read more</a>
                 </div>
             </div>
         </li>
@@ -195,8 +193,8 @@ const createPost = (data, category, author, title, description, preview, id, i) 
         <li class="post post_reversed">
             <div class="post_content">
                 <span class="post_title">
-                    ${category}
                     <span class="post_by">${author}</span>
+                    ${category}
                 </span>
                 <h2 class="post_head">${title}</h2>
                 <p class="post_text">${description}</p>
@@ -205,9 +203,7 @@ const createPost = (data, category, author, title, description, preview, id, i) 
                     <div class="post_read-more_line"></div>
                 </a>
                 <div class="block-read_wrapper">
-                    <a class="slider_block-read post_block-read" href="post.html?id=${id}">
-                        Read more
-                    </a>
+                    <a class="post_read-more-btn" href="post.html?id=${id}">Read more</a>
                 </div>
             </div>
             <div class="post_img" style="background-image: url(content/images/posts/${preview})">
