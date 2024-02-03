@@ -9,7 +9,7 @@ let posts = [
         description: 'In this post I describe how I was building this site for posts for over than one month. To be honest I was spending at least 2 or 3 hours a day.',
         content: [
             {
-                h1: 'How did it begin?',
+                h1: 'How did it begin with my new task?',
                 p: 'In the beggining I was trying to create site with Hugo, but it\'s not really useful due to lack of features and I decided to create my own website.'
             },
             {

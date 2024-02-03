@@ -11,7 +11,6 @@ html {
     --serif-font: 'PT Serif', serif;
     font-size: 16px;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {

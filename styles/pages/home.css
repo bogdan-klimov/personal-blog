@@ -706,7 +706,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: auto; */
     border: 1px solid var(--gold-color);
     font-family: var(--main-font);
     font-size: .9rem;
