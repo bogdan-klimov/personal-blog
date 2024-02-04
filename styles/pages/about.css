@@ -3,7 +3,7 @@ html {
 }
 
 .main {
-    height: calc(100vh - 358px);
+    /* height: calc(100vh - 358px); */
 }
 
 .about_wrapper {
@@ -14,6 +14,6 @@ html {
 
 .about_img {
     width: 400px;
-    height: calc(100vh - 358px);
+    height: 520px;
     border: 1px solid black;
 }
