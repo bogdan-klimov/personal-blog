@@ -3,6 +3,10 @@ html {
     scrollbar-gutter: unset;
 }
 
+body {
+    overflow-x: clip;
+}
+
 .cover {
     width: calc(100%-80px);
     height: 380px;

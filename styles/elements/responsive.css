@@ -96,6 +96,12 @@
     .content_main {
         max-width: 600px;
     }
+    .post:nth-child(1) {
+        margin-top: 26px;
+    }
+    .cover_title {
+        font-size: 2.7rem;
+    }
 }
 
 
@@ -267,6 +273,17 @@
     .nav_categories-list {
         left: 102px;
     }
+    .cover_title {
+        font-size: 2.5rem;
+    }
+
+    .navigation_text {
+        font-size: .8rem;
+    }
+
+    .navigation_button {
+        width: 160px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -360,6 +377,9 @@
     .post_read-more-btn.blog {
         margin-top: 40px;   
         margin-bottom: 17px; 
+    }
+    .cover {
+        height: 240px;
     }
 } 
 

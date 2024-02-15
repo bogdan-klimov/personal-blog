@@ -136,10 +136,6 @@ html {
     margin-top: 55px;
 }
 
-.post:nth-child(1) {
-    margin-top: 26px;
-}
-
 .post_img {
     height: 280px;
     max-width: 500px;
