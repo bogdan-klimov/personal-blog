@@ -219,7 +219,7 @@
     .nav_categories-list {
         left: 120px;
     }
-    .cover {
+    .cover, .cover_bg {
         height: 300px;
     }
     .cover_title {
@@ -378,8 +378,11 @@
         margin-top: 40px;   
         margin-bottom: 17px; 
     }
-    .cover {
+    .cover, .cover_bg {
         height: 240px;
+    }
+    .cover_title {
+        font-size: 2rem;
     }
 } 
 
