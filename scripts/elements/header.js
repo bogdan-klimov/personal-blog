@@ -54,7 +54,6 @@ for (let i = 0; i < 2; i++) {
     })
 }
 
-
 for (let j = 0; j < categoriesNav.length; j++) {
     for (let i = 0; i < categories.length; i++) {
         const li = 
@@ -68,7 +67,6 @@ for (let j = 0; j < categoriesNav.length; j++) {
         categoriesNav[j].insertAdjacentHTML('beforeend', li)
     }
 }
-
 
 const searchIcon = document.getElementById('icon_search')
 const searchWrapper = document.getElementById('search_wrapper')

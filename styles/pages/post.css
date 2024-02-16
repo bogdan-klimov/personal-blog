@@ -129,9 +129,8 @@ h4 {font-size: 1.2rem;}
 }
 
 .pop_up-img img {
-    max-width: calc(100vw - 120px);
-    max-height: calc(100vh - 120px); 
-
+    max-width: calc(100vw - 60px);
+    max-height: calc(100vh - 60px); 
 }
 
 p {
