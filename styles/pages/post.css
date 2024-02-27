@@ -121,9 +121,9 @@ h4 {font-size: 1.2rem;}
     max-height: 340px;
     margin: 0 auto;
     display: block;
-    max-width: available;
-    max-width: -moz-available;
-    width: auto;
+    /* width: available; */
+    /* max-width: -moz-available; */
+    /* width: auto; */
     margin-top: 20px;
     cursor: pointer;
 }
