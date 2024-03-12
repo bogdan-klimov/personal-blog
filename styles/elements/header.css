@@ -17,7 +17,6 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
-    /* margin: 0 auto; */
     justify-content: center;
 }
 
@@ -200,10 +199,6 @@
 
 .search_wrapper.active {
     display: block;
-}
-
-.search_head {
-    border-bottom: 1px solid var(--grey-color);
 }
 
 .search_block {

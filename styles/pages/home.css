@@ -122,7 +122,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
-    /* margin-left: -30px; */
 }
 
 .categories_block {
@@ -528,11 +527,13 @@
     justify-content: flex-end;
 }
 
-.post_reversed .post_data, .post_reversed .post_white {
+.post_reversed .post_data, 
+.post_reversed .post_white {
     margin-left: 0;
 }
 
-.post_reversed .post_title, .post_reversed .post_read-more {
+.post_reversed .post_title, 
+.post_reversed .post_read-more {
     margin-left: auto;
 }
 
@@ -587,8 +588,7 @@
     background-size: cover;
 }
 
-#gallery_left-arrow, 
-#gallery_right-arrow {
+#gallery_left-arrow, #gallery_right-arrow {
     top: 105px;
 }
 
@@ -714,4 +714,11 @@
 .post_read-more-btn:hover {
     background-color: var(--gold-color);
     color: #fff;
+}
+
+.icon-twitter:before, 
+.icon-instagram:before,
+.icon-facebook:before,
+.icon-linkedin:before {
+  font-size: 1.5rem;
 }

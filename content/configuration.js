@@ -65,7 +65,29 @@ const gallery = [
 
 // Contacts:
 
-
-
-
-
+const contacts = [
+    // Twitter:
+    {
+        background: 'mountains.jpg',
+        link: 'https://twitter.com/',
+        text: 'Klimov',
+    }, 
+    // Instagram:
+    {
+        background: 'sky.jpg',
+        link: 'https://www.instagram.com/',
+        text: '@bodya_klimov',
+    }, 
+    // Linkedin:
+    {
+        background: 'food.jpg',
+        link: 'https://uk.linkedin.com/',
+        text: 'Bogdan Klimov',
+    },
+    // Facebook:
+    {
+        background: 'home.jpg',
+        link: 'https://www.facebook.com/',
+        text: 'Bodya Klimov',
+    }
+]

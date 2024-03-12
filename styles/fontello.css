@@ -54,8 +54,7 @@
 .icon-instagram:before,
 .icon-facebook:before,
 .icon-linkedin:before {
-  font-size: 1.5rem;
-  color: var(--main-color);
+  /* font-size: 1.5rem; */
 }
 
 .icon-twitter:before { 
