@@ -12,8 +12,9 @@
 }
 
 .about_title {
-    font-family: var(--josefin-font);
+    font-family: var(--main-font);
     font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .about_preview {
@@ -21,6 +22,7 @@
     width: 100%;
     margin-right: 40px;
     height: auto;
+    min-height: 220px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

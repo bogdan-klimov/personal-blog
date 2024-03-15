@@ -403,3 +403,6 @@ for (let i = 0; i < 2; i++) {
         setSelectedCategory(categoriesOptions[i].innerText.toLowerCase())
     })
 }
+
+const socialList = document.getElementsByClassName('social_list-href')
+for (let i = 0; i < 4; i++) socialList[i].href = contacts[i].link
