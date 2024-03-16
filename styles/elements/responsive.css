@@ -110,6 +110,15 @@
         max-width: 400px;
         height: 400px;
     }
+    .about_preview {
+        max-width: 100%;
+    }
+    .about_block {
+        flex-direction: column;
+    }
+    .about_p p {
+        max-width: 100%;
+    }
 }
 
 
@@ -231,7 +240,7 @@
     .nav_categories-list {
         left: 120px;
     }
-    .cover, .cover_bg {
+    .cover {
         height: 300px;
     }
     .cover_title {
@@ -397,7 +406,7 @@
         margin-top: 40px;   
         margin-bottom: 17px; 
     }
-    .cover, .cover_bg {
+    .cover {
         height: 240px;
     }
     .cover_title {
@@ -520,8 +529,4 @@
     .search_wrapper {
         width: 320px;
     }
-}
-
-@media (max-width: 360px) {
-
 }

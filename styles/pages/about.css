@@ -11,10 +11,27 @@
     width: 100%;
 }
 
+.cover_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .5;
+}
+
+
 .about_title {
     font-family: var(--main-font);
     font-size: 1.8rem;
     font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.4rem;
+    color: var(--white-color);
 }
 
 .about_preview {
@@ -28,6 +45,18 @@
     background-repeat: no-repeat;
     background-color: grey;
     background-image: url('./../../content/images/about/coffee.jpg');
+    position: relative;
+}
+
+.about_p {
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.about_p p {
+    margin-top: 0;
 }
 
 p {

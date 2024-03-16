@@ -197,6 +197,10 @@
     display: none;
 }
 
+.search_wrapper-burger {
+    border-bottom: 1px solid var(--main-color);
+}
+
 .search_wrapper.active {
     display: block;
 }
@@ -391,7 +395,6 @@
     left: -1px;
     z-index: 10;
 }
-
 
 .click-field {
     width: 100vw;
