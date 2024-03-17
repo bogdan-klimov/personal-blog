@@ -1,14 +1,11 @@
-.container {
-    margin-top: 55px;
-    margin-bottom: 60px;
-}
-
 .about_block {
     display: flex;
+    margin-top: 55px;
 }
 
 .about_content {
     width: 100%;
+    margin-bottom: 55px;
 }
 
 .cover_bg {
@@ -21,7 +18,6 @@
     opacity: .5;
 }
 
-
 .about_title {
     font-family: var(--main-font);
     font-size: 1.8rem;
@@ -32,6 +28,7 @@
     transform: translate(-50%, -50%);
     font-size: 3.4rem;
     color: var(--white-color);
+    text-align: center;
 }
 
 .about_preview {
@@ -87,13 +84,6 @@ p {
 
 .about_additional p:first-child {
     margin-top: 0;
-}
-
-.about_content {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
 }
 
 .about_cover {
