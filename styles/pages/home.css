@@ -241,7 +241,7 @@
     display: block;
     margin: 30px auto;
     border-radius: 50%;
-    background-image: url(./../../content/images/about-portret.jpg);
+    /* background-image: url(./../../content/images/about-portret.jpg); */
     background-size: cover;
 }
 
@@ -599,7 +599,7 @@
     background-position: center;
     position: relative;
     cursor: pointer;
-    background-image: url(./../../content/images/categories/travel.jpg);
+    background-color: grey;
     margin-top: 55px;
     display: none;
     user-select: none;

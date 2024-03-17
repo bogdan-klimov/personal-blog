@@ -59,7 +59,7 @@ const gallery = [
 const aboutMain = {
     title: 'about us',
     background: 'coffee.jpg',
-    p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illo excepturi consequuntur omnis nisi nostrum dolorem, nihil reiciendis ipsum magni odit quam exercitationem porro quae id facilis quas possimus voluptatem. Odit quis illum modi ad repellendus, pariatur natus? Consequatur necessitatibus animi autem soluta possimus fuga illum modi totam quos beatae. Nostrum,'
+    p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illo excepturi consequuntur omnis nisi nostrum dolorem, nihil reiciendis ipsum magni odit quam exercitationem porro quae id facilis quas possimus voluptatem. Odit quis illum modi ad repellendus, pariatur natus?'
 }
 
 const aboutContent = [
