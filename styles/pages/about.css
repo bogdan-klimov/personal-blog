@@ -47,7 +47,6 @@
     background-repeat: no-repeat;
     background-color: grey;
     position: relative;
-    padding: 0 50px;
 }
 
 .about_p {
@@ -112,16 +111,13 @@ p {
 
 .about_cover-item:nth-child(1) {
     margin-bottom: -115px;
-    background-image: url('./../../content/images/about/road.jpg');
 } 
 
 .about_cover-item:nth-child(2) {
     margin-right: 300px;
-    background-image: url('./../../content/images/about/sand.jpg');
 }
 
 .about_cover-item:nth-child(3) {
     margin-top: -115px;
-    background-image: url('./../../content/images/about/water.jpg');
 } 
 

@@ -75,11 +75,9 @@ const aboutContent = [
 ]
 
 const aboutImages = [
-    {
-        img_1: 'mountains.jpg',
-        img_2: 'mountains.jpg',
-        img_3: 'mountains.jpg'
-    }
+    'road.jpg',
+    'sand.jpg', 
+    'water.jpg'
 ]
 
 // Contacts:

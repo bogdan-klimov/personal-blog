@@ -119,13 +119,12 @@ h4 {font-size: 1.2rem;}
 
 .img {
     max-height: 340px;
+    max-width: inherit;
     margin: 0 auto;
     display: block;
-    /* width: available; */
-    /* max-width: -moz-available; */
-    /* width: auto; */
     margin-top: 20px;
     cursor: pointer;
+    user-select: none;
 }
 
 .pop_up-img img {

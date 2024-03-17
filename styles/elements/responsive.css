@@ -129,7 +129,7 @@
     .post:nth-child(1) {
         margin-top: 26px;
     }
-    .cover_title {
+    .cover_title, .about_title {
         font-size: 2.7rem;
     }
     .contact_item, .contact_bg {
@@ -272,7 +272,7 @@
     .cover {
         height: 300px;
     }
-    .cover_title {
+    .cover_title, .about_title {
         font-size: 2.8rem;
     }
     .contact_item, .contact_bg {
@@ -330,7 +330,7 @@
     .nav_categories-list {
         left: 102px;
     }
-    .cover_title {
+    .cover_title, .about_title {
         font-size: 2.5rem;
     }
     .navigation_text {
@@ -449,7 +449,7 @@
     .cover {
         height: 240px;
     }
-    .cover_title {
+    .cover_title, .about_title {
         font-size: 2rem;
     }
     .contact_item, .contact_bg {
