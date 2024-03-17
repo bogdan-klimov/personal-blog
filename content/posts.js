@@ -1,19 +1,19 @@
 let posts = [
     {
-        title: 'How I was creating this site am i good?',
+        title: 'Lorem ipsum, dolor sit amet consectetur',
         cover: 'site/cover.jpg',
         preview: 'site/preview.jpg',
         data: '03.01.2024',
         category: 'inspiration',
         author: 'by Bodya',
-        description: 'In this post I describe how I was building this site for posts for over than one month. To be honest I was spending at least 2 or 3 hours a day.',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
         content: [
             {
-                h1: 'How did it begin with my new task?',
-                p: 'In the beggining I was trying to create site with Hugo, but it\'s not really useful due to lack of features and I decided to create my own website.'
+                h1: 'How did it begin?',
+                p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.'
             },
             {
-                p: 'I started with looking for psd maket in the internet but everything was boring. Finally, after long time of searching I found video where one guy was creating site I really liked. But there was a problem, maket wasn\'t availible so I had to create this site only by video.',
+                p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus sint voluptatum, ducimus mollitia iure obcaecati beatae minima sequi adipisci asperiores blanditiis commodi ut sunt. Delectus ullam hic ducimus maxime.',
                 image: 'site/site.jpg',
             },
         ]
