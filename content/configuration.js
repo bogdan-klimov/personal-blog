@@ -8,7 +8,6 @@ const arts = [
     'mountains.jpg',
     'red_beach.jpg',
     'yellow_beach.jpg',
-    // 'white_black.jpg',
 ] // Arts for slider
 
 const sortedPostsCount = 4 // Max number of posts in main page
@@ -57,11 +56,31 @@ const gallery = [
 
 // About:
 
+const aboutMain = {
+    title: 'about us',
+    background: 'coffee.jpg',
+    p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illo excepturi consequuntur omnis nisi nostrum dolorem, nihil reiciendis ipsum magni odit quam exercitationem porro quae id facilis quas possimus voluptatem. Odit quis illum modi ad repellendus, pariatur natus? Consequatur necessitatibus animi autem soluta possimus fuga illum modi totam quos beatae. Nostrum,'
+}
 
+const aboutContent = [
+    {
+        p: 'The third dolor sit amet, consectetur adipiscing elit. Morbi vitae ultrices augue. Suspendisse finibus augue nec mi luctus, ac bibendum diam iaculis.'
+    },
+    {
+        p: 'The third dolor sit amet, consectetur adipiscing elit. Morbi vitae ultrices augue. Suspendisse finibus augue nec mi luctus, ac bibendum diam iaculis.'
+    },
+    {
+        p: 'The third dolor sit amet, consectetur adipiscing elit. Morbi vitae ultrices augue. Suspendisse finibus augue nec mi luctus, ac bibendum diam iaculis.'
+    }
+]
 
-
-
-
+const aboutImages = [
+    {
+        img_1: 'mountains.jpg',
+        img_2: 'mountains.jpg',
+        img_3: 'mountains.jpg'
+    }
+]
 
 // Contacts:
 

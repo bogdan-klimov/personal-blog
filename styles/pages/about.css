@@ -3,9 +3,12 @@
     margin-top: 55px;
 }
 
+.about_additional {
+    margin-bottom: 55px;
+}
+
 .about_content {
     width: 100%;
-    margin-bottom: 55px;
 }
 
 .cover_bg {
@@ -29,6 +32,8 @@
     font-size: 3.4rem;
     color: var(--white-color);
     text-align: center;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 .about_preview {
@@ -41,8 +46,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: grey;
-    background-image: url('./../../content/images/about/coffee.jpg');
     position: relative;
+    padding: 0 50px;
 }
 
 .about_p {
