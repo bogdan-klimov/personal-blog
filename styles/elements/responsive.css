@@ -192,7 +192,7 @@
         max-width: 220px;
         height: 80px;
     }
-    .slider, #posts_wrapper, .cover, .about_block {
+    .slider, #posts_wrapper, .cover, .about_block, .contact_list {
         margin-top: 30px;
     }
     .nav {
@@ -226,7 +226,7 @@
     .burger_popup {
         display: block;
     }
-    .slider, #posts_wrapper, .cover, .about_block {
+    .slider, #posts_wrapper, .cover, .about_block, .contact_list {
         margin-top: 15px;
     }
     .nav {
@@ -456,6 +456,12 @@
         max-width: 220px;
         height: 400px;
     }
+    .about_additional, .about_content {
+        margin-top: 45px !important;
+    }
+    .about_p {
+        padding-top: 45px !important;
+    }
 } 
 
 @media (max-width: 600px) {
@@ -513,6 +519,12 @@
     }
     .post_text {
         max-width: 440px;
+    }
+    .about_additional, .about_content {
+        margin-top: 25px !important;
+    }
+    .about_p {
+        padding-top: 25px !important;
     }
 }
 
