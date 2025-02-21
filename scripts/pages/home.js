@@ -412,3 +412,4 @@ sideAboutImage.style.backgroundImage = `url(content/images/about/${aboutImages[0
 
 const sideAboutTxt = document.getElementById('side_about-text')
 sideAboutTxt.innerText = aboutMain.p
+

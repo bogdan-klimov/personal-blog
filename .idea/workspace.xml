@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f38e8c4f-9ed8-4da1-a8d3-03c39b3360ec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/configuration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/elements/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/elements/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/elements/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/elements/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pages/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pages/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/elements/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/elements/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/elements/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/elements/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/elements/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/elements/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2my1iR09M1PNy54ZvBUQCdTPM0J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f38e8c4f-9ed8-4da1-a8d3-03c39b3360ec" name="Changes" comment="" />
+      <created>1728034128276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728034128276</updated>
+      <workItem from="1728034129328" duration="123000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

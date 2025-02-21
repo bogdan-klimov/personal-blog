@@ -53,7 +53,7 @@ let posts = [
     },
     {
         title: 'Travel  You Shouldn\'t hello',
-        cover: '',
+        cover: 'site/cover.jpg',
         preview: 'post_1.jpg',
         data: '21.12.2006',
         category: 'travel',
